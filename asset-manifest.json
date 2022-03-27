@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.702c2e3e.chunk.css",
+    "main.js": "/static/js/main.b799459d.chunk.js",
+    "main.js.map": "/static/js/main.b799459d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.50f72ca6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.50f72ca6.js.map",
+    "static/css/2.1ca50200.chunk.css": "/static/css/2.1ca50200.chunk.css",
+    "static/js/2.7f3d19c6.chunk.js": "/static/js/2.7f3d19c6.chunk.js",
+    "static/js/2.7f3d19c6.chunk.js.map": "/static/js/2.7f3d19c6.chunk.js.map",
+    "static/js/3.4738bbcd.chunk.js": "/static/js/3.4738bbcd.chunk.js",
+    "static/js/3.4738bbcd.chunk.js.map": "/static/js/3.4738bbcd.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1ca50200.chunk.css.map": "/static/css/2.1ca50200.chunk.css.map",
+    "static/css/main.702c2e3e.chunk.css.map": "/static/css/main.702c2e3e.chunk.css.map",
+    "static/js/2.7f3d19c6.chunk.js.LICENSE.txt": "/static/js/2.7f3d19c6.chunk.js.LICENSE.txt",
+    "static/media/AboutPage.css": "/static/media/PDP_CV.7f0e6d5b.jpg",
+    "static/media/MainPage.css": "/static/media/bg6.12214069.png",
+    "static/media/bimplates.540290ac.jpg": "/static/media/bimplates.540290ac.jpg",
+    "static/media/bluetulip.0d6beb00.jpg": "/static/media/bluetulip.0d6beb00.jpg",
+    "static/media/cpii.05a9be71.jpg": "/static/media/cpii.05a9be71.jpg",
+    "static/media/css.cb432efc.svg": "/static/media/css.cb432efc.svg",
+    "static/media/figma.99c25564.png": "/static/media/figma.99c25564.png",
+    "static/media/html5.990e992a.svg": "/static/media/html5.990e992a.svg",
+    "static/media/illustrator.74985866.png": "/static/media/illustrator.74985866.png",
+    "static/media/java.cba0393e.png": "/static/media/java.cba0393e.png",
+    "static/media/javascript.82f0b66b.png": "/static/media/javascript.82f0b66b.png",
+    "static/media/mycv.378204cd.jpg": "/static/media/mycv.378204cd.jpg",
+    "static/media/photoshop.9e7408df.png": "/static/media/photoshop.9e7408df.png",
+    "static/media/python.f22d1fce.png": "/static/media/python.f22d1fce.png",
+    "static/media/reactjs.ee97676b.svg": "/static/media/reactjs.ee97676b.svg",
+    "static/media/index.css": "/static/media/roboto-latin-900italic.cb5ad999.woff2",
+    "static/media/solidworks.32e65221.png": "/static/media/solidworks.32e65221.png",
+    "static/media/xd.3f781232.png": "/static/media/xd.3f781232.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.50f72ca6.js",
+    "static/css/2.1ca50200.chunk.css",
+    "static/js/2.7f3d19c6.chunk.js",
+    "static/css/main.702c2e3e.chunk.css",
+    "static/js/main.b799459d.chunk.js"
+  ]
+}
