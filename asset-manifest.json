@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.93e4f1b3.chunk.css",
-    "main.js": "/static/js/main.c834f8a8.chunk.js",
-    "main.js.map": "/static/js/main.c834f8a8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.27110e1e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.27110e1e.js.map",
-    "static/css/2.1ca50200.chunk.css": "/static/css/2.1ca50200.chunk.css",
-    "static/js/2.95169134.chunk.js": "/static/js/2.95169134.chunk.js",
-    "static/js/2.95169134.chunk.js.map": "/static/js/2.95169134.chunk.js.map",
-    "static/js/3.86889535.chunk.js": "/static/js/3.86889535.chunk.js",
-    "static/js/3.86889535.chunk.js.map": "/static/js/3.86889535.chunk.js.map",
+    "main.css": "/static/css/main.82df2b1d.chunk.css",
+    "main.js": "/static/js/main.dc3452dc.chunk.js",
+    "main.js.map": "/static/js/main.dc3452dc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.66fe36ba.js",
+    "runtime-main.js.map": "/static/js/runtime-main.66fe36ba.js.map",
+    "static/css/2.e42a70c2.chunk.css": "/static/css/2.e42a70c2.chunk.css",
+    "static/js/2.a57bf55e.chunk.js": "/static/js/2.a57bf55e.chunk.js",
+    "static/js/2.a57bf55e.chunk.js.map": "/static/js/2.a57bf55e.chunk.js.map",
+    "static/js/3.26294619.chunk.js": "/static/js/3.26294619.chunk.js",
+    "static/js/3.26294619.chunk.js.map": "/static/js/3.26294619.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.1ca50200.chunk.css.map": "/static/css/2.1ca50200.chunk.css.map",
-    "static/css/main.93e4f1b3.chunk.css.map": "/static/css/main.93e4f1b3.chunk.css.map",
-    "static/js/2.95169134.chunk.js.LICENSE.txt": "/static/js/2.95169134.chunk.js.LICENSE.txt",
+    "static/css/2.e42a70c2.chunk.css.map": "/static/css/2.e42a70c2.chunk.css.map",
+    "static/css/main.82df2b1d.chunk.css.map": "/static/css/main.82df2b1d.chunk.css.map",
+    "static/js/2.a57bf55e.chunk.js.LICENSE.txt": "/static/js/2.a57bf55e.chunk.js.LICENSE.txt",
     "static/media/AboutPage.css": "/static/media/PDP_CV.7f0e6d5b.jpg",
-    "static/media/MainPage.css": "/static/media/bg6.31c0f0d2.png",
+    "static/media/MainPage.css": "/static/media/bg5.1a90caf2.jpg",
     "static/media/bimplates.540290ac.jpg": "/static/media/bimplates.540290ac.jpg",
     "static/media/bluetulip.0d6beb00.jpg": "/static/media/bluetulip.0d6beb00.jpg",
     "static/media/cpii.05a9be71.jpg": "/static/media/cpii.05a9be71.jpg",
@@ -34,10 +34,10 @@
     "static/media/xd.3f781232.png": "/static/media/xd.3f781232.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.27110e1e.js",
-    "static/css/2.1ca50200.chunk.css",
-    "static/js/2.95169134.chunk.js",
-    "static/css/main.93e4f1b3.chunk.css",
-    "static/js/main.c834f8a8.chunk.js"
+    "static/js/runtime-main.66fe36ba.js",
+    "static/css/2.e42a70c2.chunk.css",
+    "static/js/2.a57bf55e.chunk.js",
+    "static/css/main.82df2b1d.chunk.css",
+    "static/js/main.dc3452dc.chunk.js"
   ]
 }
