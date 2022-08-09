@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb3a4704.chunk.css",
+    "main.css": "/static/css/main.a9e08f30.chunk.css",
     "main.js": "/static/js/main.71457c44.chunk.js",
     "main.js.map": "/static/js/main.71457c44.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.50255516.js",
@@ -8,16 +8,16 @@
     "static/js/2.91de5e66.chunk.js": "/static/js/2.91de5e66.chunk.js",
     "static/js/2.91de5e66.chunk.js.map": "/static/js/2.91de5e66.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.bb3a4704.chunk.css.map": "/static/css/main.bb3a4704.chunk.css.map",
+    "static/css/main.a9e08f30.chunk.css.map": "/static/css/main.a9e08f30.chunk.css.map",
     "static/js/2.91de5e66.chunk.js.LICENSE.txt": "/static/js/2.91de5e66.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Raleway-SemiBold.8fe2bbfb.ttf",
-    "static/media/charles.22788d5d.png": "/static/media/charles.22788d5d.png",
-    "static/media/Work.css": "/static/media/mockup1.5d613c17.jpeg"
+    "static/media/Work.css": "/static/media/arpegeMockup.d1c4c33d.png",
+    "static/media/charles.22788d5d.png": "/static/media/charles.22788d5d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.50255516.js",
     "static/js/2.91de5e66.chunk.js",
-    "static/css/main.bb3a4704.chunk.css",
+    "static/css/main.a9e08f30.chunk.css",
     "static/js/main.71457c44.chunk.js"
   ]
 }
