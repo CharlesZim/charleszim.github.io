@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis&amp;display=swap" /> 
   </head>
   <body>
-<div>
+<div class="cont">
   <div class="rounded bg-gradient-1 text-white shadow p-5 text-center">
-    <p class="mb-0 font-weight-bold text-uppercase">Le retour de <3</p>
+    <p class="text-uppercase">Le retour de <3</p>
     <div class="countdown pt-4" id="time"></div>
   </div>
 </div>
@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
   font-family: "Dosis", sans-serif;
   min-height: 100vh;
-  font-size: 1.4em;
+  font-size: 30px;
 }
 
 .countdown {
@@ -32,10 +32,15 @@ body {
   font-weight: bold;
   span {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    font-size: 5rem;
+    font-size: 60px;
   }
   }
+
+
+p{
+  font-size: 60px !important;
 }
+
 .countdown-circles {
   text-transform: uppercase;
   font-weight: bold;
@@ -54,11 +59,17 @@ body {
   }
 }
 .bg-gradient-1 {
+  overflow-y: hidden;
   background: #7f7fd5;
   width: 100vw;
   height: 100vh;
+
   background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
   background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.bg-gradient-1 p{
+  margin-top: 30vh;
 }
 .bg-gradient-2 {
   background: #ff416c;
