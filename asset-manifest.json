@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.eff0f076.chunk.css",
-    "main.js": "/static/js/main.f921e232.chunk.js",
-    "main.js.map": "/static/js/main.f921e232.chunk.js.map",
+    "main.css": "/static/css/main.3585a102.chunk.css",
+    "main.js": "/static/js/main.55774f09.chunk.js",
+    "main.js.map": "/static/js/main.55774f09.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.50255516.js",
     "runtime-main.js.map": "/static/js/runtime-main.50255516.js.map",
     "static/js/2.ad997f89.chunk.js": "/static/js/2.ad997f89.chunk.js",
     "static/js/2.ad997f89.chunk.js.map": "/static/js/2.ad997f89.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.eff0f076.chunk.css.map": "/static/css/main.eff0f076.chunk.css.map",
+    "static/css/main.3585a102.chunk.css.map": "/static/css/main.3585a102.chunk.css.map",
     "static/js/2.ad997f89.chunk.js.LICENSE.txt": "/static/js/2.ad997f89.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/Raleway-SemiBold.8fe2bbfb.ttf",
     "static/media/charlesTop.058816d8.png": "/static/media/charlesTop.058816d8.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.50255516.js",
     "static/js/2.ad997f89.chunk.js",
-    "static/css/main.eff0f076.chunk.css",
-    "static/js/main.f921e232.chunk.js"
+    "static/css/main.3585a102.chunk.css",
+    "static/js/main.55774f09.chunk.js"
   ]
 }
