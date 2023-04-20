@@ -1,17 +1,26 @@
 :root{
   --primary: #141028;
   --secondary: #263c93;
+  --tertiary: #1b3ab8;
   --gray1: #eee; 
   --gray2: #fafafa;
+  --gray3: #c3c3c3;
+  --gray4: #dedede;
+  --gray5: #f3e9e9;
+  --gray6: #e0e0e0;
   --blue1: #00ffff;
   --blue3: #34506c;
-  --blue4: #395674;
-  --green1: #54ab52;
-  --green2: #32cd32;
+  --blue4: #44488a;
+  --orange: #cf9531;
+  --yellow: #fe9011;
   --red: #ff2d55;
   --pink1: #8d8dbc;
   --pink2: #8472dd;
   --white: #ffffff;
+  --skill1: #fda085dd;
+  --skill2: #50c9c3dd;
+  --skill3: #8472ddff;
+  --skill4: #f5576cdd;
 }
 
 @font-face {
@@ -44,6 +53,9 @@ html, body{
   background-color: var(--gray1);
   scroll-behavior: smooth;
   user-select: none;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -52,7 +64,6 @@ body {
   font-family: "MavenProRegular";
   -webkit-font-smoothing: antialiased;  
   width: 100%;
-  overflow-x: hidden;
 }
 
 *{
@@ -62,7 +73,8 @@ body {
 }
 
 section{
-  padding: 10px 5vmin 50px 5vmin;
+  /*padding: 10px 5vmin 50px 5vmin;*/
+  padding-top: 10px;
   width: 100vw;
   min-height: calc(100vh - 60px);
 }
@@ -98,5 +110,5 @@ p{
 
 .bold{
   font-weight: bold;
-  color: var(--gray1);
+  color: var(--blue1);
 }

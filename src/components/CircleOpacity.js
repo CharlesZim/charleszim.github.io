@@ -11,26 +11,30 @@ const CircleOpacity = (props) => {
   let section = props.section || 0;
   let left = props.left || false;
   return (
-    <motion.div
-      transition={{
-        ease: "easeInOut",
-        delay: 0.1,
-        duration: 0.5,
-      }}
-      initial={{
-        opacity: 0,
-        transform: "translateX(" + (left ? "-" : "") + "50px)",
-      }}
-      whileInView={{ opacity: 1, transform: "translateX(0px)" }}
-      viewport={{ once: true }}
-      className="circleOpacity"
+    <div
+      className="opacDiv"
       style={{
         background:
-          "linear-gradient(150deg, " + color + " 0%, rgba(255,0,0,0) 80%)",
-        top: 25 + section * 150 + "vh",
+          "linear-gradient(150deg, " + color + " 0%, rgba(255,0,255,0) 80%)",
+        top: 40 + section * 150 + "vh",
       }}
       ref={parallax.ref}
-    ></motion.div>
+    >
+      <motion.div
+        className="circleOpacity"
+        transition={{
+          ease: "easeInOut",
+          delay: 0.1,
+          duration: 0.5,
+        }}
+        initial={{
+          opacity: 0,
+          transform: "translateX(" + (left ? "-" : "") + "50px)",
+        }}
+        whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+        viewport={{ once: true }}
+      ></motion.div>
+    </div>
   );
 };
 

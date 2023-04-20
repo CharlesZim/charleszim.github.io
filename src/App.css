@@ -3,22 +3,35 @@
 }
 
 .circleOpacity{
+  background-color: red;
+  flex: 1;
+}
+
+.opacDiv{
   position: absolute;
   min-height: 100px;
   min-width: 100px;
   border-radius: 50%;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 0 50px 0 rgba(30,0,0,0.02);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.circleOpacity:nth-child(even){
-  right:-20vh;
+.opacDiv:nth-child(even){
+  right:0vh;
   height: 60vh;
   width: 60vh;
 
 }
 
-.circleOpacity:nth-child(odd){
-  left:-15vh;
+.opacDiv:nth-child(odd){
+  left:0vh;
   height: 50vh;
   width: 50vh;
+}
+
+@media screen and (max-width: 880px){
+  .opacDiv{
+    display: none;
+  }
 }
