@@ -109,7 +109,7 @@ export const skills = [
         value: 70,
       },
       {
-        name: "Google",
+        name: "Google Cloud",
         value: 40,
       },
     ],

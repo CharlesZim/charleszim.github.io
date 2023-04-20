@@ -8,12 +8,13 @@ import { skills } from "../../assets/Data";
 
 const LinkLines = ({ positions, color }) => {
   const lines = [];
-
   for (let i = 0; i < positions.length; i++) {
     for (let j = i + 1; j < positions.length; j++) {
       const from = positions[i];
       const to = positions[j];
-      const path = `M${from.x + 50},${from.y + 25} L${to.x + 50},${to.y + 25}`;
+      const path = `M${from.x + from.width / 2},${from.y + from.height / 2} L${
+        to.x + to.width / 2
+      },${to.y + to.height / 2}`;
 
       lines.push(
         <path
@@ -22,7 +23,7 @@ const LinkLines = ({ positions, color }) => {
           stroke={color || "#fff"}
           strokeWidth="1"
           fill="none"
-          opacity="0.4"
+          opacity={(0.8 * (from.width - 70)) / 50}
         />
       );
     }
@@ -52,7 +53,8 @@ const MovingItem = ({ label, gradient, x, y, value }) => (
       y,
       width: 70 + (50 * value) / 100,
       height: 30 + (30 * value) / 100,
-      fontSize: 0.8 + (0.5 * value) / 100 + "em",
+      fontSize: 0.5 + (0.7 * value) / 100 + "em",
+      borderRadius: 15 + (6 * value) / 100,
     }}
   >
     {label}
@@ -74,22 +76,35 @@ const getNewDirection = (direction, position, containerSize, itemSize) => {
 };
 const useRandomPosition = (
   containerRef,
+  value,
   initialPosition,
   initialDirection,
   speed
 ) => {
-  const [position, setPosition] = useState(initialPosition);
+  let width = 70 + (50 * value) / 100;
+  let height = 30 + (30 * value) / 100;
+  const [position, setPosition] = useState({
+    ...initialPosition,
+    width: width,
+    height: height,
+  });
   const [direction, setDirection] = useState(initialDirection);
   useEffect(() => {
     if (!containerRef.current) return;
 
     const containerRect = containerRef.current.getBoundingClientRect();
-    const itemSize = { width: 120, height: 60 };
+
+    const itemSize = {
+      width: width,
+      height: height,
+    };
 
     const updatePosition = () => {
       let newPosition = {
         x: position.x + direction.x * speed,
         y: position.y + direction.y * speed,
+        width: width,
+        height: height,
       };
 
       const newDirection = getNewDirection(
@@ -105,7 +120,7 @@ const useRandomPosition = (
 
     const interval = setInterval(updatePosition, 12);
     return () => clearInterval(interval);
-  }, [containerRef, position, direction, speed]);
+  }, [containerRef, value, position, direction, speed, height, width]);
 
   return position;
 };
@@ -140,12 +155,13 @@ const MovingItemsGroup = ({
     y = index % 2 === 0 ? y : -y;
     return useRandomPosition(
       containerRef,
+      _.value,
       {
         x: Math.random() * offset + cin.x,
         y: Math.random() * offset + cin.y,
       },
       { x: x, y: y },
-      0.4
+      0.3
     );
   });
 

@@ -3,7 +3,7 @@ import { useParallax } from "react-scroll-parallax";
 
 import "./About.css";
 
-import charles from "../../assets/images/charles.png";
+import charles from "../../assets/images/charlesP.png";
 import { MdComputer, MdMusicNote, MdFitnessCenter } from "react-icons/md";
 import { FaPlaneDeparture } from "react-icons/fa";
 
