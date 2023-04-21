@@ -1,6 +1,5 @@
 .moving-items-container {
     position: relative;
-    overflow: hidden;
     flex:  1;
   }
   
@@ -9,13 +8,13 @@
     color: white;
     font-weight: 400;
     text-align: center;
-    z-index: 3;
     padding: 15px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     font-size: 1em;
+    cursor: move;
   }
   
   .connecting-line {

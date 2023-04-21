@@ -1,0 +1,85 @@
+.portfolio{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolioSection{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.portfolioCont{
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.portfolioCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+.switchCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    text-align: center;
+}
+
+.switch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+
+.switchItem{
+    font-size: 1.4em;
+    padding: 12px 60px;
+    text-align: center;
+    color: var(--grayOp);
+    transition-duration: .3s;
+    cursor: pointer;
+    width: 300px;
+}
+
+.activeSwitch{
+    color: var(--blue1);
+}
+
+.switchItem:hover{
+    color: var(--skill2);
+}
+
+.switchItem:nth-child(1){
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.switchItem:nth-child(n+2){
+    border-left: 1px solid var(--grayOp);
+}
+
+.lastItem {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+
+  @media screen and (max-width: 880px){
+    .switchItem{
+        font-size: 1.3em;
+        padding: 12px 10px;
+        width: 200px;
+    }
+  }

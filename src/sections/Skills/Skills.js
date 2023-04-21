@@ -1,4 +1,4 @@
-import MovingItems from "./MovingItems";
+import MovingTest from "./MovingTest";
 
 import "./Skills.css";
 
@@ -7,7 +7,7 @@ const Skills = () => {
     <section className="skills">
       <h1>Skills</h1>
       <div className="skillCont">
-        <MovingItems />
+        <MovingTest />
       </div>
     </section>
   );

@@ -1,0 +1,120 @@
+.projectBox{
+    display: flex;
+    flex: 1;
+    min-height: 250px;
+}
+
+.projectLeft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectContent{
+    flex: 1;
+}
+
+.projectRight{
+    flex: 1;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectTitle{
+    color: var(--blue1);
+    font-size: 1.9em;
+    margin-bottom: 20px;
+}
+
+.projectDesc{
+    color: var(--gray1);
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+.rightBox{
+    text-align: right;
+    padding: 20px 8vmin;
+}
+
+.leftBox{
+    text-align: left;
+    padding: 20px 8vmin;
+}
+
+.projectPic{
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+    width: 25vw;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+.projectPic:hover{
+    transform: scale(1.1);
+}
+
+.projectPicCont{
+    position: relative;
+}
+
+.myProjectPic{
+    width: 25vw;
+    height:  auto;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(-8px -4px 10px rgba(0,0,30,0.4));
+}
+
+.projectPicCont::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -40px;
+    width: 25vw;
+    height: 100%;
+    border-width: 12px;
+    border-style: solid;
+    overflow: hidden;
+    border-color: transparent;
+    box-shadow: 0 0 10px 0 rgba(255,255,255,0.3);
+    border-image: linear-gradient(60deg, var(--secondary), var(--tertiary)) 1;
+    z-index: 0;
+    box-sizing: border-box;
+    opacity: .5;
+  }
+
+  @media screen and (max-width: 880px){
+    .projectBox{
+        flex-direction: column !important;
+    }
+    .rightBox{
+        text-align: center;
+    }
+    .leftBox{
+        text-align: center;
+    }
+    .projectPic{
+        width: 50vw;
+    }
+    .myProjectPic{
+        width: 50vw;
+    }
+    .projectPicCont::after {
+        width: 50vw;
+    }
+  }

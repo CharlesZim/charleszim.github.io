@@ -34,11 +34,7 @@ export const skills = [
     type: "frontend",
     skills: [
       {
-        name: "UX Design",
-        value: 50,
-      },
-      {
-        name: "UI Design",
+        name: "UI/UX Design",
         value: 60,
       },
       {
@@ -63,16 +59,20 @@ export const skills = [
     skills: [
       {
         name: "Java",
-        value: 80,
+        value: 85,
       },
 
       {
         name: "Python",
-        value: 100,
+        value: 99,
       },
       {
         name: "SQL",
-        value: 85,
+        value: 80,
+      },
+      {
+        name: "Node.js",
+        value: 70,
       },
     ],
     gradient: "linear-gradient(135deg, #96deda44 0%, #50c9c3cc 100%)",
@@ -92,6 +92,14 @@ export const skills = [
       {
         name: "Scrum",
         value: 95,
+      },
+      {
+        name: "Kanban",
+        value: 60,
+      },
+      {
+        name: "DevOps",
+        value: 80,
       },
     ],
     gradient: "linear-gradient(135deg, #a8c0ff44 0%, #8472dd 100%)",
@@ -116,5 +124,48 @@ export const skills = [
 
     gradient: "linear-gradient(135deg, #f093fb44 0%, #f5576ccc 100%)",
     stroke: "var(--skill4)",
+  },
+];
+
+export const portfolio = [
+  {
+    name: "Websites",
+    projects: [
+      {
+        id: 0,
+        name: "Charles' personal Website",
+        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
+        img: require("../assets/projects/website/Charles.png"),
+      },
+      {
+        id: 1,
+        name: "Elodie' personal Website",
+        desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
+        img: require("../assets/projects/website/Elodie.png"),
+      },
+    ],
+  },
+  {
+    name: "Mobile Apps",
+    projects: [
+      {
+        id: 0,
+        name: "CashCompass",
+        desc: "CashCompass is a user-friendly app that helps users manage their finances by tracking income, expenses, savings, and financial goals",
+        img: require("../assets/projects/app/CashCompass.png"),
+      },
+      {
+        id: 1,
+        name: "Hair'cut",
+        desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
+        img: require("../assets/projects/app/Haircut.png"),
+      },
+      {
+        id: 2,
+        name: "Ehrhart",
+        desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",
+        img: require("../assets/projects/app/Ehrhart.png"),
+      },
+    ],
   },
 ];

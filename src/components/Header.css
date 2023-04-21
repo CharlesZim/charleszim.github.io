@@ -3,7 +3,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 20000;
 
 }
 
@@ -23,7 +23,7 @@ header{
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--orange), var(--yellow));
+    background: linear-gradient(90deg, #50c9c3bb, #50c9c3);
     flex: 1;
     transform-origin: 0%;
     border-radius: 0 2px 2px 0;

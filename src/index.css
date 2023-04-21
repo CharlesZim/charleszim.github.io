@@ -21,6 +21,8 @@
   --skill2: #50c9c3dd;
   --skill3: #8472ddff;
   --skill4: #f5576cdd;
+  --grayOp : #c3c3c3ee;
+  --hover: #8472ddcc;
 }
 
 @font-face {
