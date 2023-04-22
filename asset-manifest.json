@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.62e2012d.chunk.css",
-    "main.js": "/static/js/main.855dd4b5.chunk.js",
-    "main.js.map": "/static/js/main.855dd4b5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.50255516.js",
-    "runtime-main.js.map": "/static/js/runtime-main.50255516.js.map",
-    "static/js/2.fe48bdb2.chunk.js": "/static/js/2.fe48bdb2.chunk.js",
-    "static/js/2.fe48bdb2.chunk.js.map": "/static/js/2.fe48bdb2.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.62e2012d.chunk.css.map": "/static/css/main.62e2012d.chunk.css.map",
-    "static/js/2.fe48bdb2.chunk.js.LICENSE.txt": "/static/js/2.fe48bdb2.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/Raleway-SemiBold.8fe2bbfb.ttf",
-    "static/media/charlesTop.058816d8.png": "/static/media/charlesTop.058816d8.png"
+    "main.css": "//CharlesZim.github.io/static/css/main.a81cc415.css",
+    "main.js": "//CharlesZim.github.io/static/js/main.b0031c75.js",
+    "static/js/787.ea057a87.chunk.js": "//CharlesZim.github.io/static/js/787.ea057a87.chunk.js",
+    "static/media/Elodie.png": "//CharlesZim.github.io/static/media/Elodie.faaee661cff89c011736.png",
+    "static/media/Ehrhart.png": "//CharlesZim.github.io/static/media/Ehrhart.9fbb85b4bb59b4008195.png",
+    "static/media/CashCompass.png": "//CharlesZim.github.io/static/media/CashCompass.9889ccba821d51f6819e.png",
+    "static/media/Haircut.png": "//CharlesZim.github.io/static/media/Haircut.6a772404cba4d553f152.png",
+    "static/media/Charles.png": "//CharlesZim.github.io/static/media/Charles.e755f0538fe448837828.png",
+    "static/media/CV_Charles_Zimmerlin.pdf": "//CharlesZim.github.io/static/media/CV_Charles_Zimmerlin.af8eb16e02851188fc96.pdf",
+    "static/media/charlesP.png": "//CharlesZim.github.io/static/media/charlesP.3c2950e733b6714de9af.png",
+    "static/media/Raleway-Regular.ttf": "//CharlesZim.github.io/static/media/Raleway-Regular.a9338128bb2e46698401.ttf",
+    "static/media/MavenPro-SemiBold.ttf": "//CharlesZim.github.io/static/media/MavenPro-SemiBold.3ecfee6cdc621df471e8.ttf",
+    "static/media/MavenPro-Bold.ttf": "//CharlesZim.github.io/static/media/MavenPro-Bold.ef6a943199f0d93f875e.ttf",
+    "static/media/MavenPro-Regular.ttf": "//CharlesZim.github.io/static/media/MavenPro-Regular.338a20c4765ae0ad3b13.ttf",
+    "index.html": "//CharlesZim.github.io/index.html",
+    "main.a81cc415.css.map": "//CharlesZim.github.io/static/css/main.a81cc415.css.map",
+    "main.b0031c75.js.map": "//CharlesZim.github.io/static/js/main.b0031c75.js.map",
+    "787.ea057a87.chunk.js.map": "//CharlesZim.github.io/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.50255516.js",
-    "static/js/2.fe48bdb2.chunk.js",
-    "static/css/main.62e2012d.chunk.css",
-    "static/js/main.855dd4b5.chunk.js"
+    "static/css/main.a81cc415.css",
+    "static/js/main.b0031c75.js"
   ]
 }
