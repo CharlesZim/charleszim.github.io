@@ -24,3 +24,14 @@
     pointer-events: none;
   }
   
+  .activeType{
+    font-family: "MavenProBold";
+    position: absolute;
+    top: calc(50% - 100px);
+    left: 20px;
+    color: #1b3ab8aa;
+    font-size: 7em;
+    font-weight: bold;
+    z-index: 999;
+    height: 100px;
+  }

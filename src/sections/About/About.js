@@ -6,6 +6,7 @@ import "./About.css";
 import charles from "../../assets/images/charlesP.png";
 import { MdComputer, MdMusicNote, MdFitnessCenter } from "react-icons/md";
 import { FaPlaneDeparture } from "react-icons/fa";
+import Arrow from "./Arrow";
 
 const About = () => {
   const parallax = useParallax({
@@ -43,6 +44,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Arrow />
     </section>
   );
 };

@@ -7,9 +7,10 @@ import Contact from "./sections/Contact/Contact";
 
 import Header from "./components/Header";
 
-import "./App.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 import CircleOpacity from "./components/CircleOpacity";
+
+import "./App.css";
 
 function App() {
   return (

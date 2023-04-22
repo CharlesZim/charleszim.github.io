@@ -129,23 +129,6 @@ export const skills = [
 
 export const portfolio = [
   {
-    name: "Websites",
-    projects: [
-      {
-        id: 0,
-        name: "Charles' personal Website",
-        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
-        img: require("../assets/projects/website/Charles.png"),
-      },
-      {
-        id: 1,
-        name: "Elodie' personal Website",
-        desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
-        img: require("../assets/projects/website/Elodie.png"),
-      },
-    ],
-  },
-  {
     name: "Mobile Apps",
     projects: [
       {
@@ -165,6 +148,23 @@ export const portfolio = [
         name: "Ehrhart",
         desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",
         img: require("../assets/projects/app/Ehrhart.png"),
+      },
+    ],
+  },
+  {
+    name: "Websites",
+    projects: [
+      {
+        id: 0,
+        name: "Charles' personal Website",
+        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
+        img: require("../assets/projects/website/Charles.png"),
+      },
+      {
+        id: 1,
+        name: "Elodie' personal Website",
+        desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
+        img: require("../assets/projects/website/Elodie.png"),
       },
     ],
   },

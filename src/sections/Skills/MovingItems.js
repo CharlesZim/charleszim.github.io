@@ -1,18 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useMotionValue } from "framer-motion";
+import { motion, useMotionValue, AnimatePresence } from "framer-motion";
 
 import "./MovingItems.css";
 
 import { skills } from "../../assets/Data";
 
-const LinkLine = ({
-  position1,
-  position2,
-  color,
-  activeType,
-  setActiveType,
-}) => {
+const LinkLine = ({ position1, position2, color, activeType }) => {
   const [fromX1, setFromX1] = useState(position1.x.get());
   const [fromY1, setFromY1] = useState(position1.y.get());
   const [fromX2, setFromX2] = useState(position2.x.get());
@@ -184,6 +178,8 @@ const MovingItem = ({
               ? "grayScale(0)"
               : "grayscale(1)"
             : "grayScale(0)",
+        opacity:
+          activeType !== null ? (activeType === position.type ? 1 : 0.4) : 1,
       }}
     >
       {label}
@@ -239,7 +235,6 @@ const MovingItemsGroup = ({
       initialDir,
       type: type,
     };
-
     return position;
   });
 
@@ -300,8 +295,37 @@ const MovingItems = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  let types = skills.map((skill) => skill.type);
+
   return (
     <div className="moving-items-container" ref={containerRef}>
+      <AnimatePresence mode="wait">
+        <motion.div
+          className="activeType"
+          key={activeType}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0 }}
+        >
+          {activeType !== null
+            ? types.map((type) =>
+                type === activeType ? (
+                  <motion.div
+                    key={type}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -20, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {activeType}
+                  </motion.div>
+                ) : (
+                  ""
+                )
+              )
+            : ""}
+        </motion.div>
+      </AnimatePresence>
       {containerSize &&
         skills.map((group, index) => (
           <MovingItemsGroup

@@ -1,3 +1,7 @@
+.about{
+    position: relative;
+}
+
 .aboutSection{
     display: flex;
     width: 100%;
@@ -27,8 +31,13 @@
     z-index: 2;
     box-shadow: 0 0 10px 0 rgba(0,0,0,1);
     display: flex;
+    transition-duration: .2s;
 }
 
+
+.aboutPic:hover{
+    transform: scale(1.1);
+}
 
 .aboutPicCont{
     position: relative;
@@ -93,6 +102,30 @@
     margin-top: 70px;
   }
 
+  .arrowAbout{
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 40px);
+    width: 80px;
+    cursor: pointer;
+    transition-duration: .2s;
+  }
+
+
+  .st0A{
+    stroke: #eeeeeeaa;
+    stroke-width: 12px;
+    transition-duration: .3s;
+  }
+
+  .arrowAbout:hover{
+    transform: scale(1.05);
+  }
+
+  .arrowAbout:hover .st0A{
+    stroke: var(--blue1);
+  }
+
   @media screen and (max-width: 880px){
     .aboutSection{
         flex-direction: column;
@@ -123,5 +156,8 @@
     }
     .aboutIcons{
         margin-top: 50px;
+    }
+    .arrowAbout{
+        display: none;
     }
 }
