@@ -84,7 +84,7 @@ section{
 h1{
   font-weight: 500;
   font-size: 2.3em;
-  margin: 40px 15vmin;
+  margin: 40px 15vmin 10px 15vmin;
   color: var(--gray1);
 }
 

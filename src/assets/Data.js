@@ -1,3 +1,10 @@
+import {
+  AiOutlineDesktop,
+  AiOutlineMobile,
+  AiOutlineCode,
+} from "react-icons/ai";
+import { BsVectorPen } from "react-icons/bs";
+
 export const headerItems = [
   {
     name: "Home",
@@ -16,8 +23,8 @@ export const headerItems = [
     path: "portfolio",
   },
   {
-    name: "Service",
-    path: "service",
+    name: "Services",
+    path: "services",
   },
   {
     name: "Contact",
@@ -67,7 +74,7 @@ export const skills = [
         value: 99,
       },
       {
-        name: "SQL",
+        name: "C/C++",
         value: 80,
       },
       {
@@ -132,19 +139,16 @@ export const portfolio = [
     name: "Mobile Apps",
     projects: [
       {
-        id: 0,
         name: "CashCompass",
         desc: "CashCompass is a user-friendly app that helps users manage their finances by tracking income, expenses, savings, and financial goals",
         img: require("../assets/projects/app/CashCompass.png"),
       },
       {
-        id: 1,
         name: "Hair'cut",
         desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
         img: require("../assets/projects/app/Haircut.png"),
       },
       {
-        id: 2,
         name: "Ehrhart",
         desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",
         img: require("../assets/projects/app/Ehrhart.png"),
@@ -155,23 +159,46 @@ export const portfolio = [
     name: "Websites",
     projects: [
       /*{
-        id: 0,
         name: "Nathalie' personal Website",
         desc: "Personal website of Nathalie, a talented Data Scientist, highlighting her skills, publications, and experience",
         img: require("../assets/projects/website/Nathalie.png"),
       },*/
       {
-        id: 1,
         name: "Elodie' personal Website",
         desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
         img: require("../assets/projects/website/Elodie.png"),
       },
       {
-        id: 2,
         name: "Charles' personal Website",
         desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
         img: require("../assets/projects/website/Charles.png"),
       },
     ],
+  },
+];
+
+export const services = [
+  {
+    icon: <AiOutlineMobile />,
+    title: "Mobile App Development",
+    description:
+      "Development of mobile apps for Android and iOS using React Native.",
+  },
+  {
+    icon: <AiOutlineDesktop />,
+    title: "Web Development",
+    description: "Development of websites using React, Angular, and Node.js.",
+  },
+  {
+    icon: <BsVectorPen />,
+    title: "UI/UX Design",
+    description:
+      "Design of user interfaces and user experiences for mobile apps and websites.",
+  },
+  {
+    icon: <AiOutlineCode />,
+    title: "Programming Languages",
+    description:
+      "Development of scripts to automate tasks and solve problems. I am proficient in Python, C/C++, Java and JavaScript. ",
   },
 ];

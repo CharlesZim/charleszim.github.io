@@ -1,0 +1,11 @@
+.services{
+    min-height: 50vh;
+}
+
+.servicesCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
