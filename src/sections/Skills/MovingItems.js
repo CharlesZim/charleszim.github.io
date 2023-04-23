@@ -114,6 +114,14 @@ const MovingItem = ({
       position.x.set(newX);
       position.y.set(newY);
 
+      if (newX <= 0 || newX >= containerSize.width - itemSize.width) {
+        newX = Math.max(
+          0,
+          Math.min(newX, containerSize.width - itemSize.width)
+        );
+        position.x.set(newX);
+      }
+
       const newDirection = getNewDirection(
         direction,
         { x: newX, y: newY },
@@ -123,9 +131,9 @@ const MovingItem = ({
       setDirection(newDirection);
     };
 
-    const interval = setInterval(updatePosition, 10);
+    const interval = setInterval(updatePosition, 1000 / 60);
     return () => clearInterval(interval);
-  }, [containerRef, position, x, y, speed, direction]);
+  }, [containerRef, position, x, y, speed, direction, containerSize]);
   return (
     <motion.div
       transition={{ duration: 5 }}
@@ -135,7 +143,7 @@ const MovingItem = ({
       }}
       onHoverEnd={() => {
         setActiveType(null);
-        setSpeed(0.25);
+        setSpeed(0.22);
       }}
       drag
       dragElastic={0}
@@ -279,7 +287,7 @@ const MovingItems = () => {
   const containerRef = useRef(null);
   const [containerSize, setContainerSize] = useState(null);
   const [activeType, setActiveType] = useState(null);
-  const [speed, setSpeed] = useState(0.25);
+  const [speed, setSpeed] = useState(0.22);
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
@@ -300,13 +308,7 @@ const MovingItems = () => {
   return (
     <div className="moving-items-container" ref={containerRef}>
       <AnimatePresence mode="wait">
-        <motion.div
-          className="activeType"
-          key={activeType}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0 }}
-        >
+        <motion.div className="activeType" key={activeType}>
           {activeType !== null
             ? types.map((type) =>
                 type === activeType ? (
@@ -314,7 +316,6 @@ const MovingItems = () => {
                     key={type}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
                     {activeType}

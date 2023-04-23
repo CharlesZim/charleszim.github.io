@@ -31,7 +31,7 @@ export const headerItems = [
 
 export const skills = [
   {
-    type: "frontend",
+    type: "Frontend",
     skills: [
       {
         name: "UI/UX Design",
@@ -55,7 +55,7 @@ export const skills = [
     stroke: "var(--skill1)",
   },
   {
-    type: "backend",
+    type: "Backend",
     skills: [
       {
         name: "Java",
@@ -79,7 +79,7 @@ export const skills = [
     stroke: "var(--skill2)",
   },
   {
-    type: "project management",
+    type: "Project management",
     skills: [
       {
         name: "Jira",
@@ -154,17 +154,23 @@ export const portfolio = [
   {
     name: "Websites",
     projects: [
-      {
+      /*{
         id: 0,
-        name: "Charles' personal Website",
-        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
-        img: require("../assets/projects/website/Charles.png"),
-      },
+        name: "Nathalie' personal Website",
+        desc: "Personal website of Nathalie, a talented Data Scientist, highlighting her skills, publications, and experience",
+        img: require("../assets/projects/website/Nathalie.png"),
+      },*/
       {
         id: 1,
         name: "Elodie' personal Website",
         desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
         img: require("../assets/projects/website/Elodie.png"),
+      },
+      {
+        id: 2,
+        name: "Charles' personal Website",
+        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
+        img: require("../assets/projects/website/Charles.png"),
       },
     ],
   },

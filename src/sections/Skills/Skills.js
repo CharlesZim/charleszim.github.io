@@ -1,4 +1,5 @@
 import MovingItems from "./MovingItems";
+import SkillList from "./SkillList";
 
 import "./Skills.css";
 
@@ -8,6 +9,7 @@ const Skills = () => {
       <h1>Skills</h1>
       <div className="skillCont">
         <MovingItems />
+        <SkillList />
       </div>
     </section>
   );

@@ -119,11 +119,11 @@
   }
 
   .arrowAbout:hover{
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
 
   .arrowAbout:hover .st0A{
-    stroke: var(--blue1);
+    stroke: var(--white);
   }
 
   @media screen and (max-width: 880px){

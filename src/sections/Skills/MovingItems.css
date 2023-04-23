@@ -37,13 +37,8 @@
   }
 
   @media screen and (max-width: 880px) {
-    .activeType{
-      font-size: 4em;
+    .moving-items-container{
+      display: none;
     }
   }
-    
-  @media screen and (max-width: 600px) {
-    .activeType{
-      font-size: 3em;
-    }
-  }
+  
