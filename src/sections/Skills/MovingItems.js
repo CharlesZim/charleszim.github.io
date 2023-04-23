@@ -57,9 +57,9 @@ const LinkLine = ({ position1, position2, color, activeType }) => {
         strokeWidth={
           activeType !== null
             ? activeType === position1.type
-              ? "3"
-              : "1"
-            : "1"
+              ? "1"
+              : "0.5"
+            : "0.5"
         }
         fill="none"
         opacity={0.4}
@@ -161,7 +161,7 @@ const MovingItem = ({
         zIndex:
           activeType !== null
             ? activeType === position.type
-              ? 1000
+              ? 10000
               : value
             : value,
         fontSize: fontSize,

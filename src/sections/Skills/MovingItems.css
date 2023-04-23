@@ -29,9 +29,21 @@
     position: absolute;
     top: calc(50% - 100px);
     left: 20px;
-    color: #1b3ab8aa;
+    color: #eeeeeeaa;
     font-size: 7em;
     font-weight: bold;
-    z-index: 999;
+    z-index: 99;
     height: 100px;
+  }
+
+  @media screen and (max-width: 880px) {
+    .activeType{
+      font-size: 4em;
+    }
+  }
+    
+  @media screen and (max-width: 600px) {
+    .activeType{
+      font-size: 3em;
+    }
   }
