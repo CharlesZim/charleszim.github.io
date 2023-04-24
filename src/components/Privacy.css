@@ -1,0 +1,22 @@
+.privacy{
+    background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+    padding: 30px 5vw;
+}
+
+.privacy a{
+    color: var(--gray2);
+}
+
+.privacy li{
+    color: var(--gray1);
+}
+
+.privacy h2{
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 880px) {
+    .privacy{
+        text-align: center;
+    }
+}

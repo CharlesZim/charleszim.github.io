@@ -12,10 +12,14 @@ import Header from "./components/Header";
 import { ParallaxProvider } from "react-scroll-parallax";
 import CircleOpacity from "./components/CircleOpacity";
 
-import "./App.css";
 import PhotoFull from "./components/PhotoFull";
 
-function App() {
+import { Route, Routes } from "react-router-dom";
+import Privacy from "./components/Privacy";
+
+import "./App.css";
+
+const Main = () => {
   const [photo, setPhoto] = useState(null);
   return (
     <ParallaxProvider>
@@ -34,6 +38,15 @@ function App() {
         <CircleOpacity left section={3} color="rgba(255,255,255,0.1)" />
       </div>
     </ParallaxProvider>
+  );
+};
+
+function App() {
+  return (
+    <Routes>
+      <Route exact path="/" element={<Main />} />
+      <Route path="privacy" element={<Privacy />} />
+    </Routes>
   );
 }
 
