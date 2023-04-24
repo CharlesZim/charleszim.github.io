@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.98def2de.css",
-    "main.js": "/static/js/main.73a91434.js",
+    "main.css": "/static/css/main.f89e7994.css",
+    "main.js": "/static/js/main.5df44c56.js",
     "static/js/787.ea057a87.chunk.js": "/static/js/787.ea057a87.chunk.js",
     "static/media/CV_Charles_Zimmerlin.pdf": "/static/media/CV_Charles_Zimmerlin.af8eb16e02851188fc96.pdf",
     "static/media/Elodie.webp": "/static/media/Elodie.bfb9f3b0cbf90ec12e2d.webp",
@@ -15,12 +15,12 @@
     "static/media/MavenPro-Regular.ttf": "/static/media/MavenPro-Regular.338a20c4765ae0ad3b13.ttf",
     "static/media/charlesP.webp": "/static/media/charlesP.dd78441641a2e020a6a1.webp",
     "index.html": "/index.html",
-    "main.98def2de.css.map": "/static/css/main.98def2de.css.map",
-    "main.73a91434.js.map": "/static/js/main.73a91434.js.map",
+    "main.f89e7994.css.map": "/static/css/main.f89e7994.css.map",
+    "main.5df44c56.js.map": "/static/js/main.5df44c56.js.map",
     "787.ea057a87.chunk.js.map": "/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.98def2de.css",
-    "static/js/main.73a91434.js"
+    "static/css/main.f89e7994.css",
+    "static/js/main.5df44c56.js"
   ]
 }
