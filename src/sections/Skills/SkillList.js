@@ -7,7 +7,7 @@ import "./SkillList.css";
 const SkillList = () => {
   const [completed, setCompleted] = useState(false);
   return (
-    <ul className="skillsList">
+    <div className="skillsList">
       {skills.map((skillType, index) => {
         return (
           <motion.div
@@ -59,7 +59,7 @@ const SkillList = () => {
           </motion.div>
         );
       })}
-    </ul>
+    </div>
   );
 };
 

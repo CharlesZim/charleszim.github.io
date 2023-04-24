@@ -18,7 +18,7 @@ const draw = {
 
 const Arrow = () => {
   return (
-    <Link to="skills" offset={-60}>
+    <Link href="#" to="skills" offset={-60}>
       <motion.svg
         version="1.1"
         id="Calque_1"
