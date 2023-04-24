@@ -20,14 +20,14 @@
   box-sizing: border-box;
 }
 
-.opacDiv:nth-child(even){
+.opacDiv:nth-child(odd){
   right:0vh;
   height: 60vh;
   width: 60vh;
 
 }
 
-.opacDiv:nth-child(odd){
+.opacDiv:nth-child(even){
   left:0vh;
   height: 50vh;
   width: 50vh;
