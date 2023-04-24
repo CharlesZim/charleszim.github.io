@@ -3,7 +3,7 @@ import { useParallax } from "react-scroll-parallax";
 import { useState } from "react";
 import "./About.css";
 
-import charles from "../../assets/images/charlesP.png";
+import charles from "../../assets/images/charlesP.webp";
 
 import Arrow from "./Arrow";
 import { motion } from "framer-motion";

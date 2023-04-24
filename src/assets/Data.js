@@ -162,17 +162,17 @@ export const portfolio = [
       {
         name: "CashCompass",
         desc: "CashCompass is a user-friendly app that helps users manage their finances by tracking income, expenses, savings, and financial goals",
-        img: require("../assets/projects/app/CashCompass.png"),
+        img: require("../assets/projects/app/CashCompass.webp"),
       },
       {
         name: "Hair'cut",
         desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
-        img: require("../assets/projects/app/Haircut.png"),
+        img: require("../assets/projects/app/Haircut.webp"),
       },
       {
         name: "Ehrhart",
         desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",
-        img: require("../assets/projects/app/Ehrhart.png"),
+        img: require("../assets/projects/app/Ehrhart.webp"),
       },
     ],
   },
@@ -182,17 +182,17 @@ export const portfolio = [
       /*{
         name: "Nathalie' personal Website",
         desc: "Personal website of Nathalie, a talented Data Scientist, highlighting her skills, publications, and experience",
-        img: require("../assets/projects/website/Nathalie.png"),
+        img: require("../assets/projects/website/Nathalie.webp"),
       },*/
       {
         name: "Elodie' personal Website",
         desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
-        img: require("../assets/projects/website/Elodie.png"),
+        img: require("../assets/projects/website/Elodie.webp"),
       },
       {
         name: "Charles' personal Website",
         desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
-        img: require("../assets/projects/website/Charles.png"),
+        img: require("../assets/projects/website/Charles.webp"),
       },
     ],
   },
