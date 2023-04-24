@@ -14,6 +14,8 @@ const PhotoFull = ({ photo, setPhoto }) => {
     >
       <motion.img
         src={photo}
+        width={100}
+        height={100}
         alt=""
         initial={{ opacity: 0, scale: 0 }}
         animate={

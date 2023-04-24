@@ -59,6 +59,8 @@ const About = ({ setPhoto }) => {
               className="aboutPic"
             >
               <img
+                width={100}
+                height={100}
                 src={charles}
                 alt="Charles ZimMerlin"
                 className="myPic"

@@ -7,6 +7,7 @@ import { motion, useScroll, useSpring, useAnimation } from "framer-motion";
 import Burger from "./Burger";
 
 import cv from "../../assets/files/CV_Charles_Zimmerlin.pdf";
+import logo from "../../assets/images/logo.webp";
 import "./Header.css";
 
 import { headerItems } from "../../assets/Data.js";
@@ -47,7 +48,13 @@ const Header = () => {
           <div className="headerLeft">
             <Burger />
             <Link to={"home"} className="leftTitle" offset={-60} href="#">
-              C. Zimmerlin
+              <img
+                src={logo}
+                alt="logo"
+                className="logo"
+                width={50}
+                height={50}
+              />
             </Link>
           </div>
           <div className="headerRight">

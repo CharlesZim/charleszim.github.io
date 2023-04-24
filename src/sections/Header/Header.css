@@ -13,8 +13,24 @@ header{
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     display: flex;
     align-items: center;
-    height: 60px;
+    backdrop-filter: blur(3px);
+}
 
+.leftTitle{
+  font-family: "MavenProBold";
+  color: var(--blue4);
+  margin-left: 20px;
+  text-decoration: none;
+  transition-duration: .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  width: 40px;
+  height: auto;
 }
 
 .progress-bar {
@@ -36,16 +52,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.leftTitle{
-    font-family: "MavenProBold";
-    font-size: 1.45em;
-    color: var(--blue4);
-    margin: 10px 25px;
-    text-decoration: none;
-    transition-duration: .3s;
-    cursor: pointer;
 }
 
 .leftTitle:hover{
@@ -298,7 +304,7 @@ header{
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 880px) {
     .leftTitle{
         font-size: 1.2em;
     }

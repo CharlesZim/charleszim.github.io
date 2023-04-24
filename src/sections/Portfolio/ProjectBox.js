@@ -40,7 +40,13 @@ const ProjectBox = ({ project, index, setPhoto }) => {
               setPhoto(project.img);
             }}
           >
-            <img src={project.img} alt="project" className="myProjectPic" />
+            <img
+              width={100}
+              height={100}
+              src={project.img}
+              alt="project"
+              className="myProjectPic"
+            />
           </motion.div>
         </div>
       </div>
