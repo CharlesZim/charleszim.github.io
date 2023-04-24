@@ -32,5 +32,5 @@
     transition-duration: .2s;
 }
 .footerRight a:hover {
-    color: var(--hover);
+    color: var(--blue1);
 }

@@ -38,10 +38,10 @@ const SkillList = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{
                     delay: completed ? 0 : index * 0.1 + id * 0.12,
-                    duration: completed ? 0.1 : 0.02,
-                    type: "spring",
-                    stiffness: 40,
-                    damping: 13,
+                    duration: completed ? 0.2 : 0.02,
+                    type: completed ? "tween" : "spring",
+                    stiffness: 50,
+                    damping: 12,
                   }}
                   whileHover={{
                     background: "#eeeeeeaa",

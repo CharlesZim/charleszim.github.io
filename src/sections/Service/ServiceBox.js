@@ -10,7 +10,7 @@ const ServiceBox = ({ service, index }) => {
       initial={{ opacity: 0, y: index % 2 === 0 ? -30 : -30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        delay: completed ? 0 : 0.3 + index * 0.12,
+        delay: completed ? 0 : 0.15 + index * 0.12,
         duration: completed ? 0.3 : 0.08,
         type: "spring",
         stiffness: completed ? 300 : 100,

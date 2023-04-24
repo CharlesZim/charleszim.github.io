@@ -9,8 +9,8 @@
   --gray5: #f3e9e9;
   --gray6: #e0e0e0;
   --blue1: #00ffffcc;
-  --blue3: #34506c;
-  --blue4: #44488a;
+  --blue3: #3654a0;
+  --blue4: #303591;
   --orange: #cf9531;
   --yellow: #fe9011;
   --red: #ff2d55;
@@ -50,7 +50,23 @@
     font-display: swap;
     }
 
-  
+    ::-webkit-scrollbar {
+      width: 7px; /* Width of the scrollbar */
+    }
+    
+    /* Customize the scrollbar track */
+    ::-webkit-scrollbar-track {
+      background: #3d3d3f;
+    }
+    
+    /* Customize the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+      transition-duration: .3s;
+      background: linear-gradient(120deg, var(--secondary) 0%, var(--tertiary) 150%);
+      border-radius: 2px; /* Add border-radius to make the thumb a rectangle */
+    }
+    
+
 html, body{
   background-color: var(--gray1);
   scroll-behavior: smooth;
@@ -60,6 +76,7 @@ html, body{
   max-width: 100vw;
   margin: 0;
   padding: 0;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
 body {

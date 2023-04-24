@@ -130,6 +130,14 @@ const MovingItem = ({
         position.x.set(newX);
       }
 
+      if (newY <= 0 || newY >= containerSize.height - itemSize.height) {
+        newY = Math.max(
+          0,
+          Math.min(newY, containerSize.height - itemSize.height)
+        );
+        position.y.set(newY);
+      }
+
       const newDirection = getNewDirection(
         direction,
         { x: newX, y: newY },

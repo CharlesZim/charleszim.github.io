@@ -3,14 +3,14 @@ import React, { useState, useEffect } from "react";
 
 import { Link } from "react-scroll";
 import { motion, useScroll, useSpring, useAnimation } from "framer-motion";
-
+import { BsDownload } from "react-icons/bs";
 import Burger from "./Burger";
 
 import cv from "../../assets/files/CV_Charles_Zimmerlin.pdf";
 import logo from "../../assets/images/logo.webp";
 import "./Header.css";
 
-import { headerItems } from "../../assets/Data.js";
+import { headerItems } from "../../assets/Data";
 
 const Header = () => {
   const handleDownload = () => {
@@ -71,6 +71,11 @@ const Header = () => {
                   offset={-60}
                 >
                   {category.name}
+                  {category.path === "resume" ? (
+                    <BsDownload className="iconHeader" />
+                  ) : (
+                    ""
+                  )}
                 </Link>
               );
             })}

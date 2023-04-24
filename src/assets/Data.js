@@ -33,7 +33,7 @@ export const headerItems = [
     path: "contact",
   },
   {
-    name: "Download CV",
+    name: "CV",
     path: "resume",
   },
 ];
