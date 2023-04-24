@@ -6,10 +6,10 @@ import { motion, useScroll, useSpring, useAnimation } from "framer-motion";
 
 import Burger from "./Burger";
 
-import cv from "../assets/files/CV_Charles_Zimmerlin.pdf";
+import cv from "../../assets/files/CV_Charles_Zimmerlin.pdf";
 import "./Header.css";
 
-import { headerItems } from "../assets/Data.js";
+import { headerItems } from "../../assets/Data.js";
 
 const Header = () => {
   const handleDownload = () => {

@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 12px 10%;
+    width: 100%;
+}
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footerLeft p{
+    font-size: 1em;
+}
+.footerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+}
+.footerRight a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    transition-duration: .2s;
+}
+.footerRight a:hover {
+    color: var(--hover);
+}

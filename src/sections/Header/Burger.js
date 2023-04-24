@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 
-import { headerItems } from "../assets/Data";
+import { headerItems } from "../../assets/Data";
 
 const Burger = (props) => {
   const [active, setActive] = useState(false);

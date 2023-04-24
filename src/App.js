@@ -7,7 +7,7 @@ import Portfolio from "./sections/Portfolio/Portfolio";
 import Services from "./sections/Service/Services";
 import Contact from "./sections/Contact/Contact";
 
-import Header from "./components/Header";
+import Header from "./sections/Header/Header";
 
 import { ParallaxProvider } from "react-scroll-parallax";
 import CircleOpacity from "./components/CircleOpacity";
@@ -15,9 +15,10 @@ import CircleOpacity from "./components/CircleOpacity";
 import PhotoFull from "./components/PhotoFull";
 
 import { Route, Routes } from "react-router-dom";
-import Privacy from "./components/Privacy";
+import Privacy from "./sections/Footer/Privacy";
 
 import "./App.css";
+import Footer from "./sections/Footer/Footer";
 
 const Main = () => {
   const [photo, setPhoto] = useState(null);
@@ -36,6 +37,7 @@ const Main = () => {
         <CircleOpacity left section={1} color="rgba(255,128,255,0.1)" />
         <CircleOpacity section={2} color="rgba(255,255,0,0.1)" />
         <CircleOpacity left section={3} color="rgba(255,255,255,0.1)" />
+        <Footer />
       </div>
     </ParallaxProvider>
   );
@@ -45,7 +47,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Main />} />
-      <Route path="privacy" element={<Privacy />} />
+      <Route path="confidentiality" element={<Privacy />} />
     </Routes>
   );
 }
