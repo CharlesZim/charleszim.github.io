@@ -26,7 +26,7 @@ const ServiceBox = ({ service, index }) => {
           <div className="serviceTitle">{service.title}</div>
         </div>
         <div className="serviceDescription">{service.description}</div>
-        <Link to="contact" className="hireMe">
+        <Link href="/contact" to="contact" className="hireMe">
           Let's Work Together
         </Link>
       </div>
