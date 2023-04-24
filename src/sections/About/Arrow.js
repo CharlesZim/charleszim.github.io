@@ -1,9 +1,25 @@
 import { Link } from "react-scroll/modules";
+import { motion } from "framer-motion";
+
+const draw = {
+  hidden: { pathLength: 0, opacity: 0 },
+  visible: (i) => {
+    const delay = 0 + i * 0.3;
+    return {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        pathLength: { delay, type: "spring", duration: 1, bounce: 0 },
+        opacity: { delay, duration: 0.01 },
+      },
+    };
+  },
+};
 
 const Arrow = () => {
   return (
     <Link to="skills" offset={-60}>
-      <svg
+      <motion.svg
         version="1.1"
         id="Calque_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -11,11 +27,18 @@ const Arrow = () => {
         y="0px"
         viewBox="0 0 512 512"
         className="arrowAbout"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
         <g>
           <g>
-            <path
+            <motion.path
               className="st0A"
+              variants={draw}
+              viewport={{ once: true }}
+              custom={1}
+              fill={"none"}
               d="M392.75,6.75c-0.4,29.73-5.98,59.24-16.08,87.19c-10.12,28.03-24.78,54.51-43.19,77.95
 			c-18.34,23.35-40.42,43.81-65.41,59.88c-14.43,9.28-30.04,17.39-47.02,20.69c-12.67,2.46-26.96,2.52-37.4-6.14
 			c-4.67-3.87-8.11-8.95-10.62-14.43c-1.35-2.94-3.06-6.55-3.47-9.79c-0.21-1.65,1.18-3.85,1.86-5.34c0.8-1.78,1.66-3.54,2.59-5.26
@@ -34,8 +57,11 @@ const Arrow = () => {
         </g>
         <g>
           <g>
-            <path
+            <motion.path
               className="st0A"
+              variants={draw}
+              custom={1}
+              fill={"none"}
               d="M116.42,470.26c7.56-15.86,17.82-30.38,30.28-42.77c3.52-3.5,7.21-6.82,11.05-9.97
 			c1.49-1.22-0.64-3.34-2.12-2.12c-13.73,11.24-25.5,24.85-34.66,40.05c-2.6,4.31-4.98,8.75-7.14,13.29
 			C113.01,470.48,115.59,472.01,116.42,470.26L116.42,470.26z"
@@ -44,15 +70,18 @@ const Arrow = () => {
         </g>
         <g>
           <g>
-            <path
+            <motion.path
               className="st0A"
+              variants={draw}
+              custom={1}
+              fill={"none"}
               d="M112.68,470.48c17.69,4.69,35.39,9.39,53.08,14.08c4.99,1.32,9.97,2.65,14.96,3.97
 			c1.87,0.5,2.66-2.4,0.8-2.89c-17.69-4.69-35.39-9.39-53.08-14.08c-4.99-1.32-9.97-2.65-14.96-3.97
 			C111.61,467.09,110.81,469.98,112.68,470.48L112.68,470.48z"
             />
           </g>
         </g>
-      </svg>
+      </motion.svg>
     </Link>
   );
 };

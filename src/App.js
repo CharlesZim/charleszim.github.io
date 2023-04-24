@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Home from "./sections/Home/Home";
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
@@ -11,16 +13,19 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import CircleOpacity from "./components/CircleOpacity";
 
 import "./App.css";
+import PhotoFull from "./components/PhotoFull";
 
 function App() {
+  const [photo, setPhoto] = useState(null);
   return (
     <ParallaxProvider>
       <div className="app">
+        <PhotoFull photo={photo} setPhoto={setPhoto} />
         <Header />
         <Home />
-        <About />
+        <About setPhoto={setPhoto} />
         <Skills />
-        <Portfolio />
+        <Portfolio setPhoto={setPhoto} />
         <Services />
         <Contact />
         <CircleOpacity color="rgba(200,100,100,0.1)" />

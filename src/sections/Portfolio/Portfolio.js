@@ -7,14 +7,37 @@ import ProjectBox from "./ProjectBox";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-const Portfolio = () => {
+const Portfolio = ({ setPhoto }) => {
   const [activeCategory, setActiveCategory] = useState(0);
   return (
     <section className="portfolio">
-      <h1>Portfolio</h1>
+      <motion.h1
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.3,
+          type: "spring",
+          stiffness: 100,
+        }}
+        viewport={{ once: true }}
+      >
+        Portfolio
+      </motion.h1>
       <div className="portfolioSection">
         <div className="switchCont">
-          <div className="switch">
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.3,
+              type: "spring",
+              stiffness: 100,
+            }}
+            viewport={{ once: true }}
+            className="switch"
+          >
             {
               <div
                 className={`switchItem ${
@@ -50,7 +73,7 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
         {/*<div className="portfolioCont">
           {portfolio[activeCategory].projects.map((item, index) => (
@@ -74,7 +97,7 @@ const Portfolio = () => {
                 exit={{ y: -10, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <ProjectBox project={item} index={index} />
+                <ProjectBox project={item} index={index} setPhoto={setPhoto} />
               </motion.div>
             ))}
           </motion.div>

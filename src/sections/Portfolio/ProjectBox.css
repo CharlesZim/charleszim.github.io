@@ -38,12 +38,12 @@
 
 .rightBox{
     text-align: right;
-    padding: 20px 8vmin;
+    padding: 20px 8vw;
 }
 
 .leftBox{
     text-align: left;
-    padding: 20px 8vmin;
+    padding: 20px 8vw;
 }
 
 .projectPic{
@@ -57,12 +57,7 @@
     align-items: center;
     object-fit: fill;
     width: 25vw;
-    transition-duration: .2s;
     cursor: pointer;
-}
-
-.projectPic:hover{
-    transform: scale(1.1);
 }
 
 .projectPicCont{
@@ -109,12 +104,15 @@
         text-align: center;
     }
     .projectPic{
-        width: 50vw;
+        height: 45vw;
+        width: 70vw;
     }
     .myProjectPic{
-        width: 50vw;
+        height: 45vw;
+        width: 70vw;
+
     }
     .projectPicCont::after {
-        width: 50vw;
+        display: none;
     }
   }

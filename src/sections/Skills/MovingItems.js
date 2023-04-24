@@ -37,7 +37,14 @@ const LinkLine = ({ position1, position2, color, activeType }) => {
   } L${fromX2 + position2.width / 2},${fromY2 + position2.height / 2}`;
 
   return (
-    <svg
+    <motion.svg
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        delay: 0,
+        duration: 2,
+      }}
+      viewport={{ once: true }}
       style={{
         position: "absolute",
         width: "100%",
@@ -64,7 +71,7 @@ const LinkLine = ({ position1, position2, color, activeType }) => {
         fill="none"
         opacity={0.4}
       />
-    </svg>
+    </motion.svg>
   );
 };
 
@@ -94,6 +101,7 @@ const MovingItem = ({
   activeType,
   setSpeed,
   speed,
+  index,
 }) => {
   let x = position.x;
   let y = position.y;
@@ -136,7 +144,15 @@ const MovingItem = ({
   }, [containerRef, position, x, y, speed, direction, containerSize]);
   return (
     <motion.div
-      transition={{ duration: 5 }}
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        delay: 0.1 + index * 0.08,
+        duration: 0.7,
+        type: "spring",
+        stiffness: 200,
+      }}
+      viewport={{ once: true }}
       onHoverStart={() => {
         setActiveType(position.type);
         setSpeed(0.04);
@@ -209,16 +225,17 @@ const MovingItemsGroup = ({
   speed,
 }) => {
   let offset = 100;
+  let offY = 200;
   const cornerPositions = [
     { x: offset, y: offset },
-    { x: containerSize.width - offset - 135, y: offset },
+    { x: containerSize.width - offset - offY - 135, y: offset },
     {
-      x: containerSize.width - offset - 135,
-      y: containerSize.height - offset - 65,
+      x: containerSize.width - offset - offY - 135,
+      y: containerSize.height - offset - offY - 65,
     },
     {
       x: offset,
-      y: containerSize.height - offset - 65,
+      y: containerSize.height - offset - offY - 65,
     },
   ];
   let cin = cornerPositions[cornerIndex];
@@ -234,8 +251,8 @@ const MovingItemsGroup = ({
     y = index % 2 === 0 ? y : -y;
     let initialDir = { x: x, y: y };
     const position = {
-      x: useMotionValue(Math.random() * offset + cin.x),
-      y: useMotionValue(Math.random() * offset + cin.y),
+      x: useMotionValue(Math.random() * (offset + offY) + cin.x),
+      y: useMotionValue(Math.random() * (offset + offY) + cin.y),
       width,
       height,
       fontSize,
@@ -263,6 +280,7 @@ const MovingItemsGroup = ({
           activeType={activeType}
           setSpeed={setSpeed}
           speed={speed}
+          index={index}
         />
       ))}
       {positions.map((position1, index1) =>

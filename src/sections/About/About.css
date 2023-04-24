@@ -31,13 +31,9 @@
     z-index: 2;
     box-shadow: 0 0 10px 0 rgba(0,0,0,1);
     display: flex;
-    transition-duration: .2s;
 }
 
 
-.aboutPic:hover{
-    transform: scale(1.1);
-}
 
 .aboutPicCont{
     position: relative;
@@ -53,6 +49,7 @@
     position: relative;
     z-index: 1;
     filter: drop-shadow(-8px -4px 10px rgba(0,0,30,0.4));
+    cursor: pointer;
 }
 
 .aboutPicCont::after {
@@ -136,14 +133,14 @@
         margin-bottom: 20px;
     }
     .aboutPic{
-        height: 40vw;
+        height: 57vw;
     }
     .myPic{
-        width: 35vw;
-        height: 40vw;
+        width: 47vw;
+        height: 57vw;
     }
     .aboutPicCont::after{
-        width: 30vw;
+        width: 47vw;
     }
     .aboutRight{
         flex: 1;

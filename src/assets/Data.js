@@ -4,6 +4,8 @@ import {
   AiOutlineCode,
 } from "react-icons/ai";
 import { BsVectorPen } from "react-icons/bs";
+import { MdComputer, MdMusicNote, MdFitnessCenter } from "react-icons/md";
+import { FaPlaneDeparture } from "react-icons/fa";
 
 export const headerItems = [
   {
@@ -33,6 +35,25 @@ export const headerItems = [
   {
     name: "Download CV",
     path: "resume",
+  },
+];
+
+export const hobbies = [
+  {
+    name: "Coding",
+    icon: <MdComputer />,
+  },
+  {
+    name: "Music",
+    icon: <MdMusicNote />,
+  },
+  {
+    name: "Gym",
+    icon: <MdFitnessCenter />,
+  },
+  {
+    name: "Travel",
+    icon: <FaPlaneDeparture />,
   },
 ];
 
@@ -93,10 +114,6 @@ export const skills = [
         value: 80,
       },
       {
-        name: "Agile",
-        value: 90,
-      },
-      {
         name: "Scrum",
         value: 95,
       },
@@ -124,8 +141,12 @@ export const skills = [
         value: 70,
       },
       {
-        name: "Google Cloud",
-        value: 40,
+        name: "Docker",
+        value: 60,
+      },
+      {
+        name: "Kubernetes",
+        value: 50,
       },
     ],
 

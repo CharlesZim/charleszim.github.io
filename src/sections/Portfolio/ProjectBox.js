@@ -1,8 +1,17 @@
 import "./ProjectBox.css";
-
-const ProjectBox = ({ project, index }) => {
+import { motion } from "framer-motion";
+const ProjectBox = ({ project, index, setPhoto }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{
+        delay: 0.2 + index * 0.05,
+        duration: 0.3,
+        type: "spring",
+        stiffness: 100,
+      }}
+      viewport={{ once: true }}
       className="projectBox"
       style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
     >
@@ -18,12 +27,24 @@ const ProjectBox = ({ project, index }) => {
         className={`projectRight ${index % 2 === 0 ? "rightBox" : "leftBox"}`}
       >
         <div className="projectPicCont">
-          <div className="projectPic">
+          <motion.div
+            whileHover={{ scale: 1.04 }}
+            transition={{
+              delay: 0,
+              duration: 0.3,
+              type: "spring",
+              stiffness: 220,
+            }}
+            className="projectPic"
+            onClick={() => {
+              setPhoto(project.img);
+            }}
+          >
             <img src={project.img} alt="project" className="myProjectPic" />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
