@@ -3,9 +3,10 @@ import {
   AiOutlineMobile,
   AiOutlineCode,
 } from "react-icons/ai";
-import { BsVectorPen } from "react-icons/bs";
+import { BsVectorPen, BsGithub } from "react-icons/bs";
 import { MdComputer, MdMusicNote, MdFitnessCenter } from "react-icons/md";
-import { FaPlaneDeparture } from "react-icons/fa";
+import { FaPlaneDeparture, FaLinkedinIn } from "react-icons/fa";
+import { SiInstagram } from "react-icons/si";
 
 export const headerItems = [
   {
@@ -221,5 +222,26 @@ export const services = [
     title: "Programming Languages",
     description:
       "Development of scripts to automate tasks and solve problems. I am proficient in Python, C/C++, Java and JavaScript. ",
+  },
+];
+
+export const networks = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/charles-zimmerlin/",
+    icon: <FaLinkedinIn className="iconNetwork" />,
+    color: "#0e76a8",
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/CharlesZim",
+    icon: <BsGithub className="iconNetwork" />,
+    color: "#c9510c",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/chrlzmrln/",
+    icon: <SiInstagram className="iconNetwork" />,
+    color: "#e1306c",
   },
 ];

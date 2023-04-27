@@ -123,6 +123,11 @@
     stroke: var(--white);
   }
 
+  .aboutText{
+    color: var(--gray4);
+    font-size: 1.3em;
+  }
+
   @media screen and (max-width: 880px){
     .aboutSection{
         flex-direction: column;

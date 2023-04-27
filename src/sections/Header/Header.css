@@ -267,7 +267,7 @@ header{
     top: 60px;
     left: 0;
     width: 100%;
-    background: linear-gradient(120deg, #3951b3 0%, #2641b0 100%);
+    background: linear-gradient(120deg, #192969, #253d9d);
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1) ;
     height: 0;

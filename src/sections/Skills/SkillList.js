@@ -20,10 +20,10 @@ const SkillList = () => {
               stiffness: 100,
             }}
             viewport={{ once: true }}
-            onAnimationComplete={() => setCompleted(true)}
             key={index}
             className="skillsT"
             style={{ background: skillType.gradient }}
+            onAnimationComplete={() => setCompleted(true)}
           >
             <div className="skillTitle">{skillType.type}</div>
             <div className="skillTypeCont">
@@ -37,7 +37,7 @@ const SkillList = () => {
                   }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{
-                    delay: completed ? 0 : index * 0.1 + id * 0.12,
+                    delay: completed ? 0 : 0.3 + index * 0.12 + 0.2 + id * 0.12,
                     duration: completed ? 0.2 : 0.02,
                     type: completed ? "tween" : "spring",
                     stiffness: 50,

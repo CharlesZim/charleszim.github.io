@@ -8,11 +8,12 @@
   --gray4: #dedede;
   --gray5: #f3e9e9;
   --gray6: #e0e0e0;
+  --gray7: #8e8d8d;
   --blue1: #00ffffcc;
   --blue3: #3654a0;
   --blue4: #303591;
   --orange: #cf9531;
-  --yellow: #fe9011;
+  --yellow: #050505;
   --red: #ff2d55;
   --pink1: #8d8dbc66;
   --pink2: #8472ddcc;
@@ -131,6 +132,7 @@ p{
 .bold{
   font-weight: bold;
   color: var(--blue1);
+  display: inline-block;
 }
 
 @media screen and (max-width: 880px) {

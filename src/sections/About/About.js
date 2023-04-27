@@ -86,7 +86,8 @@ const About = ({ setPhoto }) => {
           >
             Charles Zimmerlin
           </motion.h2>
-          <motion.p
+          <motion.div
+            className="aboutText"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
@@ -97,15 +98,90 @@ const About = ({ setPhoto }) => {
             }}
             viewport={{ once: true }}
           >
-            I am a <span className="bold">Full-Stack Software Engineer</span>{" "}
+            I am a{" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.5,
+                duration: 0.1,
+                type: "spring",
+                stiffness: 120,
+                damping: 16,
+              }}
+              viewport={{ once: true }}
+              className="bold"
+            >
+              Full-Stack Software Engineer
+            </motion.div>{" "}
             working in Freelance, based in Strasbourg, France. My expertise
-            includes project management, <span className="bold">frontend</span>{" "}
-            and <span className="bold">backend</span> development using mainly
-            React, React Native, Angular, Java, Node.js, and Python. I am
-            certified in <span className="bold">Google UX Design</span> and{" "}
-            <span className="bold">IBM Cybersecurity Analysis</span>. My
-            interests outside of work include music, fitness and travel.
-          </motion.p>
+            includes project management,{" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.6,
+                duration: 0.1,
+                type: "spring",
+                stiffness: 120,
+                damping: 16,
+              }}
+              viewport={{ once: true }}
+              className="bold"
+            >
+              frontend
+            </motion.div>{" "}
+            and{" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.7,
+                duration: 0.1,
+                type: "spring",
+                stiffness: 120,
+                damping: 16,
+              }}
+              viewport={{ once: true }}
+              className="bold"
+            >
+              backend
+            </motion.div>{" "}
+            development using mainly React, React Native, Angular, Java,
+            Node.js, and Python. I am certified in{" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.8,
+                duration: 0.1,
+                type: "spring",
+                stiffness: 120,
+                damping: 16,
+              }}
+              viewport={{ once: true }}
+              className="bold"
+            >
+              Google UX Design
+            </motion.div>{" "}
+            and{" "}
+            <motion.div
+              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                delay: 0.9,
+                duration: 0.1,
+                type: "spring",
+                stiffness: 120,
+                damping: 16,
+              }}
+              viewport={{ once: true }}
+              className="bold"
+            >
+              IBM Cybersecurity Analysis
+            </motion.div>
+            . My interests outside of work include music, fitness and travel.
+          </motion.div>
           <div className="aboutIcons">
             {hobbies.map((hobby, index) => (
               <CircleIcon
