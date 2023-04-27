@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b7437768.css",
-    "main.js": "/static/js/main.c8a7b543.js",
+    "main.css": "/static/css/main.e8d4feed.css",
+    "main.js": "/static/js/main.164cdfb8.js",
     "static/js/787.ea057a87.chunk.js": "/static/js/787.ea057a87.chunk.js",
     "static/media/CV_Charles_Zimmerlin.pdf": "/static/media/CV_Charles_Zimmerlin.af8eb16e02851188fc96.pdf",
     "static/media/Elodie.webp": "/static/media/Elodie.1c9539bc5298e66fb230.webp",
@@ -16,12 +16,12 @@
     "static/media/charlesP.webp": "/static/media/charlesP.dd78441641a2e020a6a1.webp",
     "static/media/logo.webp": "/static/media/logo.e041b240eb04ef9c21e6.webp",
     "index.html": "/index.html",
-    "main.b7437768.css.map": "/static/css/main.b7437768.css.map",
-    "main.c8a7b543.js.map": "/static/js/main.c8a7b543.js.map",
+    "main.e8d4feed.css.map": "/static/css/main.e8d4feed.css.map",
+    "main.164cdfb8.js.map": "/static/js/main.164cdfb8.js.map",
     "787.ea057a87.chunk.js.map": "/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7437768.css",
-    "static/js/main.c8a7b543.js"
+    "static/css/main.e8d4feed.css",
+    "static/js/main.164cdfb8.js"
   ]
 }
