@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.f88b2d2f.css",
-    "main.js": "/static/js/main.a7c3acf8.js",
+    "main.js": "/static/js/main.11c59e59.js",
     "static/js/787.ea057a87.chunk.js": "/static/js/787.ea057a87.chunk.js",
     "static/media/CV_Charles_Zimmerlin.pdf": "/static/media/CV_Charles_Zimmerlin.d455c1ee9988d845bf9d.pdf",
     "static/media/Elodie.webp": "/static/media/Elodie.1c9539bc5298e66fb230.webp",
     "static/media/Ehrhart.webp": "/static/media/Ehrhart.5ff96793ea1f4b5dd5f1.webp",
     "static/media/Raleway-Regular.ttf": "/static/media/Raleway-Regular.a9338128bb2e46698401.ttf",
     "static/media/CashCompass.webp": "/static/media/CashCompass.eb4cef9bd847b81d7a4f.webp",
+    "static/media/DoToday.webp": "/static/media/DoToday.f5477c78420cc4c010c2.webp",
     "static/media/Charles.webp": "/static/media/Charles.4c03f2ebb129b8bbae77.webp",
     "static/media/MavenPro-SemiBold.ttf": "/static/media/MavenPro-SemiBold.3ecfee6cdc621df471e8.ttf",
     "static/media/MavenPro-Bold.ttf": "/static/media/MavenPro-Bold.ef6a943199f0d93f875e.ttf",
@@ -16,11 +17,11 @@
     "static/media/logo.webp": "/static/media/logo.e041b240eb04ef9c21e6.webp",
     "index.html": "/index.html",
     "main.f88b2d2f.css.map": "/static/css/main.f88b2d2f.css.map",
-    "main.a7c3acf8.js.map": "/static/js/main.a7c3acf8.js.map",
+    "main.11c59e59.js.map": "/static/js/main.11c59e59.js.map",
     "787.ea057a87.chunk.js.map": "/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f88b2d2f.css",
-    "static/js/main.a7c3acf8.js"
+    "static/js/main.11c59e59.js"
   ]
 }
