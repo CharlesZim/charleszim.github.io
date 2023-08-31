@@ -163,7 +163,7 @@ export const portfolio = [
       {
         name: "DoToday",
         desc: "DoToday is a task management app with an intuitive interface, progress tracking, and customizable themes.",
-        img: require("../assets/projects/app/CashCompass.webp"),
+        img: require("../assets/projects/app/DoToday.webp"),
       },
       {
         name: "CashCompass",
