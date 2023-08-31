@@ -8,8 +8,7 @@ const ProjectBox = ({ project, index, setPhoto }) => {
       transition={{
         delay: 0.2 + index * 0.05,
         duration: 0.3,
-        type: "spring",
-        stiffness: 100,
+        type: "linear",
       }}
       viewport={{ once: true }}
       className="projectBox"

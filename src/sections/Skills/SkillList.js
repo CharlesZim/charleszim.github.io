@@ -11,7 +11,7 @@ const SkillList = () => {
       {skills.map((skillType, index) => {
         return (
           <motion.div
-            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+            initial={{ opacity: 0, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.3 + index * 0.12,
@@ -30,8 +30,8 @@ const SkillList = () => {
               {skillType.skills.map((skill, id) => (
                 <motion.div
                   initial={{
-                    opacity: 0,
-                    scale: 0,
+                    opacity: 1,
+                    scale: 1,
                     background: "#eeeeee22",
                     color: "#eeeeeecc",
                   }}

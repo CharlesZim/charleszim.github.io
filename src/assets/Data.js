@@ -161,15 +161,20 @@ export const portfolio = [
     name: "Mobile Apps",
     projects: [
       {
+        name: "DoToday",
+        desc: "DoToday is a task management app with an intuitive interface, progress tracking, and customizable themes.",
+        img: require("../assets/projects/app/CashCompass.webp"),
+      },
+      {
         name: "CashCompass",
         desc: "CashCompass is a user-friendly app that helps users manage their finances by tracking income, expenses, savings, and financial goals",
         img: require("../assets/projects/app/CashCompass.webp"),
       },
-      {
-        name: "Hair'cut",
-        desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
-        img: require("../assets/projects/app/Haircut.webp"),
-      },
+      // {
+      //   name: "Hair'cut",
+      //   desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
+      //   img: require("../assets/projects/app/Haircut.webp"),
+      // },
       {
         name: "Ehrhart",
         desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",

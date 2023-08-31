@@ -7,7 +7,7 @@ const ServiceBox = ({ service, index }) => {
   const [completed, setCompleted] = useState(false);
   return (
     <motion.div
-      initial={{ opacity: 0, y: index % 2 === 0 ? -30 : -30 }}
+      initial={{ opacity: 0, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         delay: completed ? 0 : 0.15 + index * 0.12,

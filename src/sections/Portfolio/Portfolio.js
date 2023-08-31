@@ -12,13 +12,12 @@ const Portfolio = ({ setPhoto }) => {
   return (
     <section className="portfolio">
       <motion.h1
-        initial={{ opacity: 0, x: -30 }}
+        initial={{ opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
           delay: 0.3,
           duration: 0.3,
-          type: "spring",
-          stiffness: 100,
+          type: "linear",
         }}
         viewport={{ once: true }}
       >
@@ -27,13 +26,12 @@ const Portfolio = ({ setPhoto }) => {
       <div className="portfolioSection">
         <div className="switchCont">
           <motion.div
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               delay: 0.5,
               duration: 0.3,
-              type: "spring",
-              stiffness: 100,
+              type: "linear",
             }}
             viewport={{ once: true }}
             className="switch"
@@ -84,17 +82,17 @@ const Portfolio = ({ setPhoto }) => {
           <motion.div
             className="portfolioCont"
             key={activeCategory}
-            initial={{ y: 10, opacity: 0 }}
+            initial={{ y: 0, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
+            exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
             {portfolio[activeCategory].projects.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 10, opacity: 0 }}
+                initial={{ y: 0, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -10, opacity: 0 }}
+                exit={{ y: 0, opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
                 <ProjectBox project={item} index={index} setPhoto={setPhoto} />

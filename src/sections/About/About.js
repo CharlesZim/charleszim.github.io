@@ -18,7 +18,7 @@ const About = ({ setPhoto }) => {
   return (
     <section className="about">
       <motion.h1
-        initial={{ opacity: 0, x: -30 }}
+        initial={{ opacity: 0, x: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
           delay: 0.2,
@@ -46,7 +46,7 @@ const About = ({ setPhoto }) => {
             ref={parallax.ref}
           >
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: 0 }}
               whileInView={{ opacity: 1, x: 0 }}
               whileHover={{ scale: 1.04 }}
               transition={{
@@ -74,7 +74,7 @@ const About = ({ setPhoto }) => {
         </div>
         <div className="aboutRight">
           <motion.h2
-            initial={{ opacity: 0, y: -30 }}
+            initial={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               delay: 0.3,
@@ -88,7 +88,7 @@ const About = ({ setPhoto }) => {
           </motion.h2>
           <motion.div
             className="aboutText"
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{
               delay: 0.4,
@@ -100,7 +100,7 @@ const About = ({ setPhoto }) => {
           >
             I am a{" "}
             <motion.div
-              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 delay: 0.5,
@@ -117,7 +117,7 @@ const About = ({ setPhoto }) => {
             working in Freelance, based in Strasbourg, France. My expertise
             includes project management,{" "}
             <motion.div
-              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 delay: 0.6,
@@ -133,7 +133,7 @@ const About = ({ setPhoto }) => {
             </motion.div>{" "}
             and{" "}
             <motion.div
-              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 delay: 0.7,
@@ -150,7 +150,7 @@ const About = ({ setPhoto }) => {
             development using mainly React, React Native, Angular, Java,
             Node.js, and Python. I am certified in{" "}
             <motion.div
-              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 delay: 0.8,
@@ -166,7 +166,7 @@ const About = ({ setPhoto }) => {
             </motion.div>{" "}
             and{" "}
             <motion.div
-              initial={{ opacity: 0, scale: 0, display: "inline-block" }}
+              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 delay: 0.9,
