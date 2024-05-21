@@ -28,7 +28,7 @@ const ContactForm = () => {
             <label htmlFor="fullname">Name</label>
             <input
               required
-              placeholder="Jean Dupont"
+              placeholder="Jean Dupond"
               {...register("fullname")}
             />
           </div>
@@ -47,7 +47,7 @@ const ContactForm = () => {
           <textarea
             required
             className="message"
-            placeholder="Hello ! ..."
+            placeholder="Hello ! I want you in my team ;)"
             {...register("message")}
           />
         </div>

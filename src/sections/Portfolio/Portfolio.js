@@ -45,8 +45,8 @@ const Portfolio = ({ setPhoto }) => {
                   setActiveCategory(0);
                 }}
                 style={{
-                  color: activeCategory === 0 ? "var(--blue1)" : "",
-                  fontWeight: activeCategory === 0 ? "bold" : "",
+                  color: activeCategory === 0 ? "#fff" : "",
+                  fontWeight: activeCategory === 0 ? "700" : "",
                 }}
               >
                 {portfolio[0].name}
@@ -60,8 +60,8 @@ const Portfolio = ({ setPhoto }) => {
                     index === portfolio.length - 2 ? "lastItem" : ""
                   }`}
                   style={{
-                    color: activeCategory === index + 1 ? "var(--blue1)" : "",
-                    fontWeight: activeCategory === index + 1 ? "bold" : "",
+                    color: activeCategory === index + 1 ? "#fff" : "",
+                    fontWeight: activeCategory === index + 1 ? "700" : "",
                   }}
                   onClick={() => {
                     setActiveCategory(index + 1);

@@ -232,6 +232,7 @@ const MovingItemsGroup = ({
   setSpeed,
   speed,
 }) => {
+  console.log("types", type, skills);
   let offset = 100;
   let offY = 200;
   const cornerPositions = [

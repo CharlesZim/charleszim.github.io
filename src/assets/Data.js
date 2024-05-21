@@ -26,7 +26,7 @@ export const headerItems = [
     path: "portfolio",
   },
   {
-    name: "Services",
+    name: "Expertise",
     path: "services",
   },
   {
@@ -68,19 +68,19 @@ export const skills = [
       },
       {
         name: "React",
-        value: 100,
+        value: 90,
       },
       {
         name: "React Native",
-        value: 100,
+        value: 95,
       },
       {
-        name: "Angular",
-        value: 70,
+        name: "REST",
+        value: 90,
       },
     ],
 
-    gradient: "linear-gradient(135deg, #f6d36544 0%, #fda085cc 100%)",
+    gradient: "linear-gradient(135deg, #5fd4a3aa 0%, #5fd4a3bb 100%)",
     stroke: "var(--skill1)",
   },
   {
@@ -104,30 +104,54 @@ export const skills = [
         value: 70,
       },
     ],
-    gradient: "linear-gradient(135deg, #96deda44 0%, #50c9c3cc 100%)",
+    gradient: "linear-gradient(135deg, #f6d36544 0%, #fda085cc 100%)",
     stroke: "var(--skill2)",
   },
+  // {
+  //   type: "Project management",
+  //   skills: [
+  //     {
+  //       name: "Jira",
+  //       value: 80,
+  //     },
+  //     {
+  //       name: "Scrum",
+  //       value: 95,
+  //     },
+  //     {
+  //       name: "Kanban",
+  //       value: 60,
+  //     },
+  //     {
+  //       name: "DevOps",
+  //       value: 80,
+  //     },
+  //   ],
+  //   gradient: "linear-gradient(135deg, #a8c0ff44 0%, #8472dd 100%)",
+  //   stroke: "var(--skill3)",
+  // },
   {
-    type: "Project management",
+    type: "Mobile iOS",
     skills: [
       {
-        name: "Jira",
-        value: 80,
+        name: "Swift",
+        value: 100,
       },
       {
-        name: "Scrum",
-        value: 95,
+        name: "SwiftUI",
+        value: 100,
       },
       {
-        name: "Kanban",
-        value: 60,
+        name: "Core Data",
+        value: 70,
       },
       {
-        name: "DevOps",
-        value: 80,
+        name: "Design Patterns",
+        value: 85,
       },
     ],
-    gradient: "linear-gradient(135deg, #a8c0ff44 0%, #8472dd 100%)",
+
+    gradient: "linear-gradient(135deg, #587beecc 0%, #3c5fd3cc   100%)",
     stroke: "var(--skill3)",
   },
   {
@@ -161,23 +185,28 @@ export const portfolio = [
     name: "Mobile Apps",
     projects: [
       {
-        name: "DoToday",
+        name: "Simple To Do Planner - ReaList",
+        desc: "A task manager app made to assist users in their daily task management with a simple interface. Enhanced version of the DoToday app.",
+        img: require("../assets/projects/app/ReaList.webp"),
+      },
+      {
+        name: "Kanban - Project Management",
+        desc: "A Kanban board app tailored for personal or small projects to optimize task management.",
+        img: require("../assets/projects/app/Kanban.webp"),
+      },
+      {
+        name: "DoToday: To-Do List Planner",
         desc: "DoToday is a task management app with an intuitive interface, progress tracking, and customizable themes.",
         img: require("../assets/projects/app/DoToday.webp"),
       },
       {
-        name: "CashCompass",
-        desc: "CashCompass is a user-friendly app that helps users manage their finances by tracking income, expenses, savings, and financial goals",
+        name: "Cash Compass - Easy Budget",
+        desc: "A budget management app designed to assist users in tracking their expenses and saving money.",
         img: require("../assets/projects/app/CashCompass.webp"),
       },
-      // {
-      //   name: "Hair'cut",
-      //   desc: "Hair'cut is an app that simplifies hair salon management and appointment booking for clients and staff, featuring an easy-to-use interface",
-      //   img: require("../assets/projects/app/Haircut.webp"),
-      // },
       {
-        name: "Ehrhart",
-        desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery",
+        name: "Ehrhart Vendanges",
+        desc: "Ehrhart is a mobile app for a viticulture company, allowing their providers to book appointments for grape harvesting and wine delivery.",
         img: require("../assets/projects/app/Ehrhart.webp"),
       },
     ],
@@ -185,19 +214,19 @@ export const portfolio = [
   {
     name: "Websites",
     projects: [
-      /*{
+      {
         name: "Nathalie' personal Website",
-        desc: "Personal website of Nathalie, a talented Data Scientist, highlighting her skills, publications, and experience",
+        desc: "Personal website of Nathalie, a talented Data Scientist, highlighting her skills, publications, and experience.",
         img: require("../assets/projects/website/Nathalie.webp"),
-      },*/
+      },
       {
         name: "Elodie' personal Website",
-        desc: "Elodie's personal website highlights her engineering experience, projects, and skills",
+        desc: "Elodie's personal website highlights her engineering experience, projects, and skills.",
         img: require("../assets/projects/website/Elodie.webp"),
       },
       {
         name: "Charles' personal Website",
-        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information",
+        desc: "Charles' personal website showcases his skills, achievements, and services with an interactive portfolio and contact information.",
         img: require("../assets/projects/website/Charles.webp"),
       },
     ],
@@ -209,7 +238,7 @@ export const services = [
     icon: <AiOutlineMobile />,
     title: "Mobile App Development",
     description:
-      "Development of mobile apps for Android and iOS using React Native.",
+      "Development of mobile apps for Android and iOS using React Native, and for Native iOS apps with Swift.",
   },
   {
     icon: <AiOutlineDesktop />,
@@ -226,7 +255,7 @@ export const services = [
     icon: <AiOutlineCode />,
     title: "Programming Languages",
     description:
-      "Development of scripts to automate tasks and solve problems. I am proficient in Python, C/C++, Java and JavaScript. ",
+      "Development of scripts to automate tasks and solve problems. I am proficient in Python, Java and JavaScript. ",
   },
 ];
 

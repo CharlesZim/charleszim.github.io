@@ -98,7 +98,7 @@ const About = ({ setPhoto }) => {
             }}
             viewport={{ once: true }}
           >
-            I am a{" "}
+            I am an{" "}
             <motion.div
               initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -112,10 +112,10 @@ const About = ({ setPhoto }) => {
               viewport={{ once: true }}
               className="bold"
             >
-              Full-Stack Software Engineer
+              iOS Software Engineer
             </motion.div>{" "}
-            working in Freelance, based in Strasbourg, France. My expertise
-            includes project management,{" "}
+            currently working as application Developer & Founder, based in
+            Colmar, France. My expertise includes project management,{" "}
             <motion.div
               initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -147,8 +147,8 @@ const About = ({ setPhoto }) => {
             >
               backend
             </motion.div>{" "}
-            development using mainly React, React Native, Angular, Java,
-            Node.js, and Python. I am certified in{" "}
+            development using mainly Swift, Core Data, React, React Native,
+            Java, Node.js, and Python. I am certified in{" "}
             <motion.div
               initial={{ opacity: 1, scale: 1, display: "inline-block" }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -178,7 +178,7 @@ const About = ({ setPhoto }) => {
               viewport={{ once: true }}
               className="bold"
             >
-              IBM Cybersecurity Analysis
+              IBM DevOps and Software Engineer
             </motion.div>
             . My interests outside of work include music, fitness and travel.
           </motion.div>

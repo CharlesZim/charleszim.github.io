@@ -19,7 +19,7 @@ const Home = () => {
           viewport={{ once: true }}
           className="topTitle"
         >
-          I'm a
+          I'm an
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -34,9 +34,7 @@ const Home = () => {
           className="bottomTitle"
         >
           <span className="textTitle">
-            Full-Stack
-            <br />
-            Software
+            iOS Software
             <br />
             Engineer
           </span>

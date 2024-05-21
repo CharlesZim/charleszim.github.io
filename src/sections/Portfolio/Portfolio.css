@@ -58,7 +58,7 @@
 }
 
 .switchItem:hover{
-    color: var(--skill2);
+    color: #fff;
 }
 
 .switchItem:nth-child(1){

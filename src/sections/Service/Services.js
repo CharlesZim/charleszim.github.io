@@ -17,7 +17,7 @@ const Services = () => {
         }}
         viewport={{ once: true }}
       >
-        Services
+        Technical Expertise
       </motion.h1>
       <div className="servicesCont">
         {services.map((service, index) => (

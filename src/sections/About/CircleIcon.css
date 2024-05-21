@@ -1,7 +1,7 @@
 .circleCont{
     width: 65px;
     height: 65px;
-    background: linear-gradient(to right, var(--pink1), var(--pink2));
+    background: linear-gradient(to right, var(--secondary), var(--blue3));
     display: flex;
     justify-content: center;
     align-items: center;
