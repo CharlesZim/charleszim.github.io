@@ -2,4 +2,19 @@
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
+
+// jsdom doesn't implement IntersectionObserver, which framer-motion's
+// `whileInView` relies on. Provide a no-op mock for the test environment.
+class IntersectionObserverMock {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return [];
+  }
+}
+
+global.IntersectionObserver = IntersectionObserverMock;
+window.IntersectionObserver = IntersectionObserverMock;

@@ -1,123 +1,72 @@
-.boxSer{
-    flex: 42%;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    margin: 30px 30px;
-    background: linear-gradient(140deg, #365ddecc, #3c5fd3aa);
-    border-radius: 6px;
-    box-shadow: 0 0 6px rgba(122, 141, 216, 0.2); 
-    cursor: default;
+.serviceCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 100% 0%, rgba(109, 139, 255, 0.14), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+  pointer-events: none;
+}
+.serviceCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+}
+.serviceCard:hover::before {
+  opacity: 1;
 }
 
-
-.serviceBox{
-    flex: 1;
-    overflow: hidden;
-    background: linear-gradient(120deg, #587bee33 0%, #303591cc 100%);
-    border-radius: 6px;
-    z-index: 2;
-    transition-duration: .2s;
-    position: relative;
+.serviceIcon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-size: 1.6rem;
+  color: var(--accent);
+  background: var(--accent-grad-soft);
+  border: 1px solid var(--border);
+  margin-bottom: 22px;
 }
 
-.boxSer:hover .serviceBox{
-    background-color: #587bee;
+.serviceTitle {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  position: relative;
 }
 
-.serviceTop{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
+.serviceDescription {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex: 1;
+  position: relative;
 }
 
-.serviceIcon{
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
-    font-size: 2.6em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #ffffffdd;
-    color: var(--secondary);
-    transition-duration: .2s;
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: gap 0.25s var(--ease), color 0.25s var(--ease);
+  position: relative;
 }
-
-
-.serviceTitle{
-    flex: 1;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 50px;
-    font-family: "MavenProBold";
-    color: var(--gray1);
-    font-size: 2.3em;
-}
-
-.serviceDescription{
-    flex: 1;
-    padding: 25px;
-    color: var(--gray3);
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-
-.hireMe{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left:0;
-    bottom:0;
-    width: 100%;
-    font-size: 1.3em;
-    color: var(--secondary);
-    background-color: #eeeeeeee;
-    transition-duration: .2s;
-    cursor: pointer;
-    transform: scaleY(0);
-    transform-origin: center 100%;
-    text-decoration: none;
-}
-
-.serviceBox:hover .hireMe{
-    transform: scale(1);
-}
-
-.hireMe:hover{
-    color: #fff;
-    background-color: #303591;
-}
-
-@media screen and (max-width: 880px){
-    .serviceTitle{
-        font-size: 1.5em;
-    }    
-    .serviceDescription{
-        text-align: center;
-    }
-    .hireMe{
-        transform: scale(1);
-        font-size: 1.2em;
-    }
-
-    .serviceDescription{
-        margin-bottom: 40px;
-    }
-
-    .boxSer{
-        margin: 10px 6vw;
-    }
-}
-
-@media screen and (max-width: 375px){
-    .serviceIcon{
-        display: none;
-    }
+.serviceLink:hover {
+  gap: 14px;
+  color: var(--text);
 }

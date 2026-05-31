@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-scroll";
-import { motion, useScroll, useSpring, useAnimation } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { BsDownload } from "react-icons/bs";
 import Burger from "./Burger";
 
@@ -27,63 +27,47 @@ const Header = () => {
     restDelta: 0.01,
   });
 
-  const controls = useAnimation();
-  const [isInitialRender, setIsInitialRender] = useState(true);
-
-  useEffect(() => {
-    if (isInitialRender) {
-      setIsInitialRender(false);
-      controls.start({
-        y: 0,
-        opacity: 1,
-        transition: { duration: 0.4, delay: 0.2, ease: "easeInOut" },
-      });
-    }
-  }, [controls, isInitialRender]);
+  const navItems = headerItems.filter((item) => item.path !== "resume");
 
   return (
-    <motion.div initial={{ y: -10, opacity: 0 }} animate={controls}>
-      <header>
-        <div className="header">
-          <div className="headerLeft">
-            <Burger />
-            <Link to={"home"} className="leftTitle" offset={-60} href="#">
-              <img
-                src={logo}
-                alt="logo"
-                className="logo"
-                width={50}
-                height={50}
-              />
-            </Link>
-          </div>
-          <div className="headerRight">
-            {headerItems.map((category, index) => {
-              return (
-                <Link
-                  href="#"
-                  onClick={() =>
-                    category.path === "resume" ? handleDownload() : ""
-                  }
-                  to={category.path === "resume" ? "" : category.path}
-                  key={index}
-                  className="headerElem"
-                  offset={-60}
-                >
-                  {category.name}
-                  {category.path === "resume" ? (
-                    <BsDownload className="iconHeader" />
-                  ) : (
-                    ""
-                  )}
-                </Link>
-              );
-            })}
-          </div>
+    <motion.header
+      className="header"
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div className="navShell glass">
+        <div className="navLeft">
+          <Burger />
+          <Link to={"home"} className="brand" offset={-90} href="#">
+            <img src={logo} alt="Charles Zimmerlin" className="logo" width={34} height={34} />
+            <span className="brandName">Charles Zimmerlin</span>
+          </Link>
         </div>
-        <motion.div className="progress-bar" style={{ scaleX }} />
-      </header>
-    </motion.div>
+
+        <nav className="navLinks">
+          {navItems.map((item, index) => (
+            <Link
+              href="#"
+              to={item.path}
+              key={index}
+              className="navLink"
+              offset={-90}
+              spy={true}
+              activeClass="navLinkActive"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        <button className="navCta" onClick={handleDownload}>
+          Resume
+          <BsDownload className="navCtaIcon" />
+        </button>
+      </div>
+      <motion.div className="progress-bar" style={{ scaleX }} />
+    </motion.header>
   );
 };
 

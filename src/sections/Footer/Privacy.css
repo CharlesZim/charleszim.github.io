@@ -1,22 +1,50 @@
-.privacy{
-    background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
-    padding: 30px 5vw;
+.privacy {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(80px, 12vh, 130px) clamp(22px, 5vw, 48px) 80px;
+  min-height: 100vh;
 }
 
-.privacy a{
-    color: var(--gray2);
+.privacy h1 {
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
+  margin: 40px 0 14px;
+}
+.privacy h1:first-child {
+  margin-top: 0;
 }
 
-.privacy li{
-    color: var(--gray1);
+.privacy h2 {
+  font-size: 1.4rem;
+  margin: 30px 0 12px;
 }
 
-.privacy h2{
-    margin: 20px 0;
+.privacy h3 {
+  font-size: 1.15rem;
+  margin: 22px 0 10px;
 }
 
-@media screen and (max-width: 880px) {
-    .privacy{
-        text-align: center;
-    }
+.privacy p {
+  margin-bottom: 14px;
+  color: var(--text-soft);
+}
+
+.privacy ul {
+  padding-left: 22px;
+  margin-bottom: 16px;
+}
+.privacy li {
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.privacy strong {
+  color: var(--text);
+}
+
+.privacy a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.privacy a:hover {
+  text-decoration: underline;
 }

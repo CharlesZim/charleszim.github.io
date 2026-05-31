@@ -1,40 +1,57 @@
-.app{
-  background: linear-gradient(120deg, var(--primary) 0%, #1f2742 100%);
+/* Animated aurora field, painted on the body behind all content */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+body::before {
+  top: -18vh;
+  left: -10vw;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle at 30% 30%, #6d8bff, transparent 60%);
+  animation: drift1 22s ease-in-out infinite alternate;
+}
+
+body::after {
+  bottom: -22vh;
+  right: -12vw;
+  width: 58vw;
+  height: 58vw;
+  background: radial-gradient(circle at 60% 40%, #a877ff, transparent 60%);
+  animation: drift2 26s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(8vw, 10vh, 0) scale(1.15);
+  }
+}
+
+@keyframes drift2 {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+  to {
+    transform: translate3d(-9vw, -8vh, 0) scale(0.95);
+  }
+}
+
+/* Single stacking context above the aurora; transparent so it shows through */
+.app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  height: 100%;
-}
-
-.circleOpacity{
-  background-color: red;
-  flex: 1;
-}
-
-.opacDiv{
-  position: absolute;
-  min-height: 100px;
-  min-width: 100px;
-  border-radius: 50%;
-  box-shadow: 0 0 50px 0 rgba(30,0,0,0.02);
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.opacDiv:nth-child(odd){
-  right:0vh;
-  height: 60vh;
-  width: 60vh;
-
-}
-
-.opacDiv:nth-child(even){
-  left:0vh;
-  height: 50vh;
-  width: 50vh;
-}
-
-@media screen and (max-width: 880px){
-  .opacDiv{
-    display: none;
-  }
+  background: transparent;
 }

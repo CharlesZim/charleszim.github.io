@@ -3,13 +3,11 @@ import { Link } from "react-scroll";
 
 import "./Button.css";
 
-const Button = (props) => {
-  let to = props.to || "";
-  let title = props.title || "Button";
-
+const Button = ({ to = "", title = "Button", variant = "primary", icon = null }) => {
   return (
-    <Link href="#" to={to} className="ctaHome" offset={-60}>
+    <Link href="#" to={to} className={`btn btn-${variant}`} offset={-90}>
       {title}
+      {icon}
     </Link>
   );
 };

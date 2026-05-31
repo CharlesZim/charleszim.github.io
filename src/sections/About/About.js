@@ -1,201 +1,113 @@
-import CircleIcon from "./CircleIcon";
 import { useParallax } from "react-scroll-parallax";
-import { useState } from "react";
+import { motion } from "framer-motion";
+
 import "./About.css";
 
 import charles from "../../assets/images/charlesP.webp";
-
-import Arrow from "./Arrow";
-import { motion } from "framer-motion";
 import { hobbies } from "../../assets/Data";
 
-const About = ({ setPhoto }) => {
-  const parallax = useParallax({
-    speed: -2,
-  });
+const reveal = {
+  hidden: { opacity: 0, y: 30 },
+  show: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.1 + i * 0.08, duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
 
-  const [completed, setCompleted] = useState(false);
+const certs = ["Google UX Design", "IBM DevOps & Software Engineer"];
+
+const About = ({ setPhoto }) => {
+  const parallax = useParallax({ speed: -6 });
+
   return (
-    <section className="about">
-      <motion.h1
-        initial={{ opacity: 0, x: 0 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{
-          delay: 0.2,
-          duration: 0.3,
-          type: "spring",
-          stiffness: 100,
-        }}
-        viewport={{ once: true }}
-      >
-        About me
-      </motion.h1>
-      <div className="aboutSection">
-        <div className="aboutLeft ">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.3,
-              type: "spring",
-              stiffness: 100,
-            }}
+    <section className="about" id="about">
+      <div className="aboutGrid">
+        <motion.div
+          className="aboutMedia"
+          ref={parallax.ref}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={reveal}
+        >
+          <div className="aboutPhotoFrame" onClick={() => setPhoto(charles)}>
+            <img src={charles} alt="Charles Zimmerlin" className="aboutPhoto" />
+          </div>
+          <div className="aboutBadge glass">
+            <span className="aboutBadgeDot" />
+            Founder &amp; iOS Engineer
+          </div>
+        </motion.div>
+
+        <div className="aboutText">
+          <motion.span
+            className="eyebrow"
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
-            className="aboutPicCont"
-            ref={parallax.ref}
+            variants={reveal}
           >
-            <motion.div
-              initial={{ opacity: 0, x: 0 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.04 }}
-              transition={{
-                delay: completed ? 0 : 0.3,
-                duration: completed ? 0.3 : 0.08,
-                type: "spring",
-                stiffness: completed ? 220 : 100,
-              }}
-              viewport={{ once: true }}
-              className="aboutPic"
-            >
-              <img
-                width={100}
-                height={100}
-                src={charles}
-                alt="Charles ZimMerlin"
-                className="myPic"
-                onClick={() => {
-                  setPhoto(charles);
-                }}
-              />
-            </motion.div>
-          </motion.div>
-          <div className="border"></div>
-        </div>
-        <div className="aboutRight">
+            About
+          </motion.span>
+
           <motion.h2
-            initial={{ opacity: 1, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.3,
-              type: "spring",
-              stiffness: 100,
-            }}
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
+            custom={1}
+            variants={reveal}
           >
             Charles Zimmerlin
           </motion.h2>
-          <motion.div
-            className="aboutText"
-            initial={{ opacity: 1, x: 0 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{
-              delay: 0.4,
-              duration: 0.3,
-              type: "spring",
-              stiffness: 100,
-            }}
+
+          <motion.p
+            initial="hidden"
+            whileInView="show"
             viewport={{ once: true }}
+            custom={2}
+            variants={reveal}
           >
-            I am an{" "}
-            <motion.div
-              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.5,
-                duration: 0.1,
-                type: "spring",
-                stiffness: 120,
-                damping: 16,
-              }}
-              viewport={{ once: true }}
-              className="bold"
-            >
-              iOS Software Engineer
-            </motion.div>{" "}
-            currently working as application Developer & Founder, based in
-            Colmar, France. My expertise includes project management,{" "}
-            <motion.div
-              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.6,
-                duration: 0.1,
-                type: "spring",
-                stiffness: 120,
-                damping: 16,
-              }}
-              viewport={{ once: true }}
-              className="bold"
-            >
-              frontend
-            </motion.div>{" "}
-            and{" "}
-            <motion.div
-              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.7,
-                duration: 0.1,
-                type: "spring",
-                stiffness: 120,
-                damping: 16,
-              }}
-              viewport={{ once: true }}
-              className="bold"
-            >
-              backend
-            </motion.div>{" "}
-            development using mainly Swift, Core Data, React, React Native,
-            Java, Node.js, and Python. I am certified in{" "}
-            <motion.div
-              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.8,
-                duration: 0.1,
-                type: "spring",
-                stiffness: 120,
-                damping: 16,
-              }}
-              viewport={{ once: true }}
-              className="bold"
-            >
-              Google UX Design
-            </motion.div>{" "}
-            and{" "}
-            <motion.div
-              initial={{ opacity: 1, scale: 1, display: "inline-block" }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{
-                delay: 0.9,
-                duration: 0.1,
-                type: "spring",
-                stiffness: 120,
-                damping: 16,
-              }}
-              viewport={{ once: true }}
-              className="bold"
-            >
-              IBM DevOps and Software Engineer
-            </motion.div>
-            . My interests outside of work include music, fitness and travel.
-          </motion.div>
-          <div className="aboutIcons">
-            {hobbies.map((hobby, index) => (
-              <CircleIcon
-                key={index}
-                icon={hobby.icon}
-                index={index}
-                completed={completed}
-                setCompleted={setCompleted}
-              />
+            I'm an <span className="bold">iOS Software Engineer</span> and founder
+            based in Colmar, France, working end-to-end across{" "}
+            <span className="bold">frontend</span> and{" "}
+            <span className="bold">backend</span> — mostly with Swift, Core Data,
+            React, React Native, Node.js and Python. I turn ideas into polished
+            products that ship and scale.
+          </motion.p>
+
+          <motion.div
+            className="aboutCerts"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            custom={3}
+            variants={reveal}
+          >
+            {certs.map((c, i) => (
+              <span className="certChip" key={i}>
+                {c}
+              </span>
             ))}
-          </div>
+          </motion.div>
+
+          <motion.div
+            className="aboutHobbies"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            custom={4}
+            variants={reveal}
+          >
+            {hobbies.map((hobby, index) => (
+              <div className="hobby" key={index}>
+                <span className="hobbyIcon">{hobby.icon}</span>
+                <span className="hobbyName">{hobby.name}</span>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
-      <Arrow />
     </section>
   );
 };
