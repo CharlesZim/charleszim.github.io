@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Build & deploy on every push to main
+  push:
+    branches: [main]
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+# Only one deploy at a time; let an in-progress run finish.
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          # Don't fail the production build on ESLint warnings.
+          CI: false
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          # The CNAME file lives in public/ and is copied into build/,
+          # so the custom domain (charles-zimmerlin.com) is preserved.
