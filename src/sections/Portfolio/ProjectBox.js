@@ -1,55 +1,32 @@
 import "./ProjectBox.css";
 import { motion } from "framer-motion";
+import { HiArrowUpRight } from "react-icons/hi2";
+
 const ProjectBox = ({ project, index, setPhoto }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
+    <motion.article
+      className="projectCard glass"
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.2 + index * 0.05,
-        duration: 0.3,
-        type: "linear",
+        delay: index * 0.07,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
       }}
       viewport={{ once: true }}
-      className="projectBox"
-      style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
+      onClick={() => setPhoto(project.img)}
     >
-      <div
-        className={`projectLeft ${index % 2 === 0 ? "leftBox" : "rightBox"}`}
-      >
-        <div className="projectContent">
-          <div className="projectTitle">{project.name}</div>
-          <p className="projectDesc">{project.desc}</p>
-        </div>
+      <div className="projectThumb">
+        <img src={project.img} alt={project.name} className="projectImg" loading="lazy" />
+        <span className="projectZoom">
+          <HiArrowUpRight />
+        </span>
       </div>
-      <div
-        className={`projectRight ${index % 2 === 0 ? "rightBox" : "leftBox"}`}
-      >
-        <div className="projectPicCont">
-          <motion.div
-            whileHover={{ scale: 1.04 }}
-            transition={{
-              delay: 0,
-              duration: 0.3,
-              type: "spring",
-              stiffness: 220,
-            }}
-            className="projectPic"
-            onClick={() => {
-              setPhoto(project.img);
-            }}
-          >
-            <img
-              width={100}
-              height={100}
-              src={project.img}
-              alt="project"
-              className="myProjectPic"
-            />
-          </motion.div>
-        </div>
+      <div className="projectBody">
+        <h3 className="projectName">{project.name}</h3>
+        <p className="projectDesc">{project.desc}</p>
       </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

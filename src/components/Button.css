@@ -1,24 +1,2 @@
-.ctaHome{
-    color: var(--white);
-    font-size: 1.8em;
-    background:  linear-gradient(var(--secondary),var(--tertiary));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 30px;
-    margin-top: 60px;
-    margin-bottom: -50px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
-    transition-duration: .2s;
-    text-decoration: none;
-    z-index: 1;
-    position: relative;
-}
-
-.ctaHome:hover{
-    background: var(--white);
-    color: var(--secondary);
-    cursor: pointer;
-    transform: scale(1.02);
-}
+/* Button styles live in index.css (.btn / .btn-primary / .btn-ghost).
+   This file is kept for backwards compatibility. */

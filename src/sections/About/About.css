@@ -1,165 +1,142 @@
-.about{
-    position: relative;
+.about {
+  position: relative;
 }
 
-.aboutSection{
-    display: flex;
-    width: 100%;
-    flex: 1;
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+/* ---------- Media ---------- */
+.aboutMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutPhotoFrame {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform 0.4s var(--ease);
+}
+.aboutPhotoFrame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(6, 9, 18, 0.5));
+}
+.aboutPhotoFrame:hover {
+  transform: translateY(-6px);
+}
+
+.aboutPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aboutBadge {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+.aboutBadgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-grad);
+}
+
+/* ---------- Text ---------- */
+.aboutText h2 {
+  margin-bottom: 18px;
+}
+.aboutText p {
+  margin-bottom: 28px;
+}
+
+.aboutCerts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+.certChip {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.aboutHobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.hobby {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.hobby:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.hobbyIcon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent-grad-soft);
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+.hobbyName {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+@media screen and (max-width: 880px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .aboutMedia {
+    margin-bottom: 12px;
+  }
+  .eyebrow,
+  .aboutCerts,
+  .aboutHobbies {
     justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.aboutLeft{
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.aboutPic{
-    height: 100%;
-    object-fit: cover;
-    background: linear-gradient(150deg, var(--gray5), var(--gray6));
-    padding-top: 0px;
-    margin: 0;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,1);
-    display: flex;
-}
-
-
-
-.aboutPicCont{
-    position: relative;
-    border-radius: 500px;
-}
-
-.myPic{
-    width: 20vw;
-    height: 25vw;
-    object-fit: cover;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(-8px -4px 10px rgba(0,0,30,0.4));
-    cursor: pointer;
-}
-
-.aboutPicCont::after {
-    content: "";
-    position: absolute;
-    top: 40px;
-    right: -40px;
-    width: 20vw;
-    height: 100%;
-    border-width: 12px;
-    border-style: solid;
-    overflow: hidden;
-    border-color: transparent;
-    box-shadow: 0 0 10px 0 rgba(255,255,255,0.3);
-    border-image: linear-gradient(30deg, var(--secondary), var(--tertiary)) 1;
-    z-index: 0;
-    box-sizing: border-box;
-    opacity: .5;
   }
-
-  .aboutRight{
-    flex: 3;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    color : var(--gray4);
-    padding-left: 0px;
-    justify-content: space-between;
-    padding-right: 60px;
-}
-
-.aboutRight h2{
-    font-weight: 600;
-    margin-bottom: 40px;
-    flex: 1;
-}
-
-.aboutRight p{
-    flex: 1;
-}
-
-.aboutIcons{
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
-  }
-
-  .arrowAbout{
-    position: absolute;
-    bottom: 15px;
-    left: calc(50% - 40px);
-    width: 80px;
-    cursor: pointer;
-    transition-duration: .2s;
-  }
-
-
-  .st0A{
-    stroke: #eeeeeeaa;
-    stroke-width: 12px;
-    transition-duration: .3s;
-  }
-
-  .arrowAbout:hover{
-    transform: scale(1.08);
-  }
-
-  .arrowAbout:hover .st0A{
-    stroke: var(--white);
-  }
-
-  .aboutText{
-    color: var(--gray4);
-    font-size: 1.3em;
-  }
-
-  @media screen and (max-width: 880px){
-    .aboutSection{
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .aboutLeft{
-        flex: 1;
-        margin-bottom: 20px;
-    }
-    .aboutPic{
-        height: 57vw;
-    }
-    .myPic{
-        width: 47vw;
-        height: 57vw;
-    }
-    .aboutPicCont::after{
-        width: 47vw;
-    }
-    .aboutRight{
-        flex: 1;
-        text-align: center;
-        margin-top: 50px;
-        padding: 0 20px;
-    }
-    .aboutRight h2{
-        margin-bottom: 20px;
-    }
-    .aboutIcons{
-        margin-top: 50px;
-    }
-    .arrowAbout{
-        display: none;
-    }
 }

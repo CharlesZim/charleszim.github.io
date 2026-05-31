@@ -1,12 +1,12 @@
-.skills{
-    display: flex;
-    flex-direction: column;
+.skills {
+  display: flex;
+  flex-direction: column;
 }
 
-.skillCont{
-    flex: 1;
-    height: 100%;
-    width: 100%;
-    display: flex;
-
+.skillsHead {
+  max-width: 640px;
+  margin-bottom: 48px;
+}
+.skillsHead h1 {
+  margin-bottom: 16px;
 }

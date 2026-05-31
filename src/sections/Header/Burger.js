@@ -1,51 +1,56 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import { BsDownload } from "react-icons/bs";
 
+import cv from "../../assets/files/CV_Charles_Zimmerlin.pdf";
 import { headerItems } from "../../assets/Data";
 
-const Burger = (props) => {
+const Burger = () => {
   const [active, setActive] = useState(false);
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight,
-  ]);
 
   const menuRef = useRef(null);
   const burgerRef = useRef(null);
 
-  const handleClickOutside = (event) => {
-    if (
-      menuRef.current &&
-      !menuRef.current.contains(event.target) &&
-      !burgerRef.current.contains(event.target)
-    ) {
-      setActive(false);
-    }
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = cv;
+    link.target = "_blank";
+    link.click();
   };
 
   useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        burgerRef.current &&
+        !burgerRef.current.contains(event.target)
+      ) {
+        setActive(false);
+      }
     };
 
-    window.addEventListener("resize", handleWindowResize);
-    if (windowSize[0] > 980 && active) {
-      setActive(false);
-    }
+    const handleResize = () => {
+      if (window.innerWidth > 880) setActive(false);
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
-
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
     };
-  }, [windowSize, active]);
+  }, []);
+
+  const items = headerItems.filter((item) => item.path !== "resume");
 
   return (
-    <div>
+    <div className="burgerWrap">
       <div
         ref={burgerRef}
         onClick={() => setActive(!active)}
         className={"btn " + (active ? "active" : "not-active")}
+        aria-label="Toggle menu"
       >
         <span></span>
         <span></span>
@@ -54,24 +59,29 @@ const Burger = (props) => {
       <div
         ref={menuRef}
         className="menuBurger"
-        style={{
-          height: active && menuRef ? 60 * (headerItems.length - 1) : 0,
-        }}
+        style={{ height: active ? `${items.length * 58 + 86}px` : 0 }}
       >
-        {headerItems?.slice(0, -1).map((category, index) => {
-          return (
-            <Link
-              href="#"
-              onClick={() => setActive(false)}
-              to={category.path}
-              key={index}
-              className="burgerItem"
-              offset={-60}
-            >
-              {category.name}
-            </Link>
-          );
-        })}
+        {items.map((item, index) => (
+          <Link
+            href="#"
+            onClick={() => setActive(false)}
+            to={item.path}
+            key={index}
+            className="burgerItem"
+            offset={-90}
+          >
+            {item.name}
+          </Link>
+        ))}
+        <button
+          className="burgerCta"
+          onClick={() => {
+            handleDownload();
+            setActive(false);
+          }}
+        >
+          Resume <BsDownload />
+        </button>
       </div>
     </div>
   );
