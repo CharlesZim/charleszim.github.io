@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.46f1a34f.css",
-    "main.js": "/static/js/main.6d267777.js",
+    "main.css": "/static/css/main.b4ddfe54.css",
+    "main.js": "/static/js/main.059dd63e.js",
     "static/js/787.ea057a87.chunk.js": "/static/js/787.ea057a87.chunk.js",
     "static/media/Elodie.webp": "/static/media/Elodie.1c9539bc5298e66fb230.webp",
     "static/media/ReaList.webp": "/static/media/ReaList.70a7205646de07ae078b.webp",
     "static/media/Kanban.webp": "/static/media/Kanban.291997f0f4b37b47c55f.webp",
     "static/media/DoToday.webp": "/static/media/DoToday.9195a2792e8a32493c5e.webp",
-    "static/media/CV_Charles_Zimmerlin.pdf": "/static/media/CV_Charles_Zimmerlin.cd84261c297e3778c63c.pdf",
     "static/media/Ehrhart.webp": "/static/media/Ehrhart.7961e54dfa53bf7bac99.webp",
     "static/media/Raleway-Regular.ttf": "/static/media/Raleway-Regular.a9338128bb2e46698401.ttf",
     "static/media/CashCompass.webp": "/static/media/CashCompass.eb4cef9bd847b81d7a4f.webp",
@@ -20,14 +19,13 @@
     "static/media/MavenPro-Regular.ttf": "/static/media/MavenPro-Regular.338a20c4765ae0ad3b13.ttf",
     "static/media/charlesP.webp": "/static/media/charlesP.dd78441641a2e020a6a1.webp",
     "static/media/Nathalie.webp": "/static/media/Nathalie.bfdc7f8bdaf806b853cf.webp",
-    "static/media/logo.webp": "/static/media/logo.e041b240eb04ef9c21e6.webp",
     "index.html": "/index.html",
-    "main.46f1a34f.css.map": "/static/css/main.46f1a34f.css.map",
-    "main.6d267777.js.map": "/static/js/main.6d267777.js.map",
+    "main.b4ddfe54.css.map": "/static/css/main.b4ddfe54.css.map",
+    "main.059dd63e.js.map": "/static/js/main.059dd63e.js.map",
     "787.ea057a87.chunk.js.map": "/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46f1a34f.css",
-    "static/js/main.6d267777.js"
+    "static/css/main.b4ddfe54.css",
+    "static/js/main.059dd63e.js"
   ]
 }
