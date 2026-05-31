@@ -1,57 +1,45 @@
-/* Animated aurora field, painted on the body behind all content */
+/* Deep aurora wash on the body, behind the constellation and content */
 body::before,
 body::after {
   content: "";
   position: fixed;
   z-index: 0;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.45;
+  filter: blur(130px);
+  opacity: 0.4;
   pointer-events: none;
 }
 
 body::before {
-  top: -18vh;
-  left: -10vw;
-  width: 60vw;
-  height: 60vw;
+  top: -22vh;
+  left: -12vw;
+  width: 62vw;
+  height: 62vw;
   background: radial-gradient(circle at 30% 30%, #6d8bff, transparent 60%);
-  animation: drift1 22s ease-in-out infinite alternate;
+  animation: drift1 24s ease-in-out infinite alternate;
 }
 
 body::after {
-  bottom: -22vh;
-  right: -12vw;
-  width: 58vw;
-  height: 58vw;
+  bottom: -24vh;
+  right: -14vw;
+  width: 60vw;
+  height: 60vw;
   background: radial-gradient(circle at 60% 40%, #a877ff, transparent 60%);
-  animation: drift2 26s ease-in-out infinite alternate;
+  animation: drift2 28s ease-in-out infinite alternate;
 }
 
 @keyframes drift1 {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(8vw, 10vh, 0) scale(1.15);
-  }
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(7vw, 9vh, 0) scale(1.18); }
 }
-
 @keyframes drift2 {
-  from {
-    transform: translate3d(0, 0, 0) scale(1.1);
-  }
-  to {
-    transform: translate3d(-9vw, -8vh, 0) scale(0.95);
-  }
+  from { transform: translate3d(0, 0, 0) scale(1.1); }
+  to { transform: translate3d(-8vw, -7vh, 0) scale(0.95); }
 }
 
-/* Single stacking context above the aurora; transparent so it shows through */
-.app {
-  position: relative;
-  z-index: 1;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: transparent;
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
 }

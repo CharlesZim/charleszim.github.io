@@ -1,0 +1,51 @@
+body.custom-cursor,
+body.custom-cursor * {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100001;
+  pointer-events: none;
+}
+
+.cursorDot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(244, 246, 255, 0.85);
+  mix-blend-mode: difference;
+  transition: width 0.28s var(--ease), height 0.28s var(--ease),
+    background 0.28s var(--ease), border-color 0.28s var(--ease);
+}
+
+.cursor-hover .cursorDot,
+.cursor-link .cursorDot,
+.cursor-add .cursorDot {
+  width: 72px;
+  height: 72px;
+  background: rgba(244, 246, 255, 0.16);
+  border-color: transparent;
+}
+
+.cursor-add .cursorDot {
+  background: rgba(109, 139, 255, 0.35);
+}
+
+.cursorLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  white-space: nowrap;
+}
