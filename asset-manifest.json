@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d2eb41e.css",
-    "main.js": "/static/js/main.84f0536a.js",
+    "main.css": "/static/css/main.46f1a34f.css",
+    "main.js": "/static/js/main.6d267777.js",
     "static/js/787.ea057a87.chunk.js": "/static/js/787.ea057a87.chunk.js",
     "static/media/Elodie.webp": "/static/media/Elodie.1c9539bc5298e66fb230.webp",
     "static/media/ReaList.webp": "/static/media/ReaList.70a7205646de07ae078b.webp",
@@ -13,18 +13,21 @@
     "static/media/CashCompass.webp": "/static/media/CashCompass.eb4cef9bd847b81d7a4f.webp",
     "static/media/Charles.webp": "/static/media/Charles.4c03f2ebb129b8bbae77.webp",
     "static/media/MavenPro-SemiBold.ttf": "/static/media/MavenPro-SemiBold.3ecfee6cdc621df471e8.ttf",
+    "static/media/MavenPro-ExtraBold.ttf": "/static/media/MavenPro-ExtraBold.c9d0a844ee021d6cd2c4.ttf",
     "static/media/MavenPro-Bold.ttf": "/static/media/MavenPro-Bold.ef6a943199f0d93f875e.ttf",
+    "static/media/MavenPro-Black.ttf": "/static/media/MavenPro-Black.d7aec7ad460de30260df.ttf",
+    "static/media/MavenPro-Medium.ttf": "/static/media/MavenPro-Medium.5c573586d51e1f18df66.ttf",
     "static/media/MavenPro-Regular.ttf": "/static/media/MavenPro-Regular.338a20c4765ae0ad3b13.ttf",
     "static/media/charlesP.webp": "/static/media/charlesP.dd78441641a2e020a6a1.webp",
     "static/media/Nathalie.webp": "/static/media/Nathalie.bfdc7f8bdaf806b853cf.webp",
     "static/media/logo.webp": "/static/media/logo.e041b240eb04ef9c21e6.webp",
     "index.html": "/index.html",
-    "main.4d2eb41e.css.map": "/static/css/main.4d2eb41e.css.map",
-    "main.84f0536a.js.map": "/static/js/main.84f0536a.js.map",
+    "main.46f1a34f.css.map": "/static/css/main.46f1a34f.css.map",
+    "main.6d267777.js.map": "/static/js/main.6d267777.js.map",
     "787.ea057a87.chunk.js.map": "/static/js/787.ea057a87.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d2eb41e.css",
-    "static/js/main.84f0536a.js"
+    "static/css/main.46f1a34f.css",
+    "static/js/main.6d267777.js"
   ]
 }
